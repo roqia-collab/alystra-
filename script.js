@@ -3,16 +3,16 @@ const $$ = (s, c = document) => [...c.querySelectorAll(s)];
 const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const fine = window.matchMedia('(pointer: fine)').matches;
 
-/* ---------- Loader ---------- */
-const finishLoad = () => {
-  const l = $('#loader');
-  if (l) l.classList.add('done');
-  document.body.classList.add('loaded');
-};
-window.addEventListener('load', () => setTimeout(finishLoad, reduce ? 0 : 900));
-setTimeout(finishLoad, 3500); // sécurité si une image tarde
+/* ---------- Chargement ---------- */
+const finishLoad = () => { $('#loader')?.classList.add('done'); document.body.classList.add('loaded'); };
+if ($('#loader')) {
+  window.addEventListener('load', () => setTimeout(finishLoad, reduce ? 0 : 700));
+  setTimeout(finishLoad, 3000);
+} else {
+  setTimeout(finishLoad, 60);
+}
 
-/* ---------- Header + progress ---------- */
+/* ---------- Header + barre de progression ---------- */
 const header = $('#header');
 const progress = $('#progress');
 let lastY = 0;
@@ -20,73 +20,78 @@ const onScroll = () => {
   const y = window.scrollY;
   if (header) {
     header.classList.toggle('scrolled', y > 30);
-    header.classList.toggle('hide', y > lastY && y > 400 && !$('#nav')?.classList.contains('open'));
+    header.classList.toggle('hide', y > lastY && y > 500 && !document.body.classList.contains('menu-open'));
   }
   lastY = y;
-  if (progress) progress.style.width = (y / (document.documentElement.scrollHeight - innerHeight)) * 100 + '%';
+  if (progress) progress.style.width = (y / Math.max(1, document.documentElement.scrollHeight - innerHeight)) * 100 + '%';
 };
 addEventListener('scroll', onScroll, { passive: true });
 onScroll();
 
-/* ---------- Mobile menu ---------- */
-const burger = $('#burger'), nav = $('#nav');
-if (burger && nav) {
+/* ---------- Menu mobile ---------- */
+const burger = $('#burger'), mmenu = $('#mmenu');
+if (burger && mmenu) {
   const set = (open) => {
-    nav.classList.toggle('open', open); burger.classList.toggle('open', open);
+    mmenu.classList.toggle('open', open);
+    burger.classList.toggle('open', open);
+    document.body.classList.toggle('menu-open', open);
     burger.setAttribute('aria-expanded', String(open));
+    burger.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
     document.body.style.overflow = open ? 'hidden' : '';
+    $$('a', mmenu).forEach((a, i) => { a.style.transitionDelay = open ? 0.05 + i * 0.035 + 's' : '0s'; });
   };
-  burger.addEventListener('click', () => set(!nav.classList.contains('open')));
-  $$('a', nav).forEach(a => a.addEventListener('click', () => set(false)));
+  burger.addEventListener('click', () => set(!mmenu.classList.contains('open')));
+  $$('a', mmenu).forEach(a => a.addEventListener('click', () => set(false)));
+  addEventListener('keydown', e => { if (e.key === 'Escape') set(false); });
+  addEventListener('resize', () => { if (innerWidth > 960) set(false); });
 }
 
-/* ---------- Reveal on scroll ---------- */
+/* ---------- Apparition au défilement ---------- */
 let pending = $$('.reveal, .reveal-img');
 const revealCheck = () => {
   if (!pending.length) return;
   const vh = innerHeight;
-  const batch = pending.filter(el => { const r = el.getBoundingClientRect(); return r.top < vh * 0.9 && r.bottom > 0; });
-  batch.forEach((el, i) => { el.style.transitionDelay = Math.min(i, 5) * 0.09 + 's'; el.classList.add('in'); });
+  const batch = pending.filter(el => { const r = el.getBoundingClientRect(); return r.top < vh * 0.92 && r.bottom > 0; });
+  batch.forEach((el, i) => { el.style.transitionDelay = Math.min(i, 5) * 0.08 + 's'; el.classList.add('in'); });
   pending = pending.filter(el => !el.classList.contains('in'));
 };
 addEventListener('scroll', revealCheck, { passive: true });
 addEventListener('resize', revealCheck);
 revealCheck();
-setInterval(revealCheck, 400); // filet de sécurité (ancres, navigation clavier…)
+setInterval(revealCheck, 400);
 
-/* ---------- Cursor glow ---------- */
+/* ---------- Halo autour du curseur ---------- */
 const glow = $('#glow');
 if (glow && fine && !reduce) {
-  let gx = -600, gy = -600, tx = gx, ty = gy;
+  let gx = -700, gy = -700, tx = gx, ty = gy;
   addEventListener('mousemove', e => { tx = e.clientX; ty = e.clientY; });
   (function loop() { gx += (tx - gx) * .12; gy += (ty - gy) * .12; glow.style.left = gx + 'px'; glow.style.top = gy + 'px'; requestAnimationFrame(loop); })();
 }
 
-/* ---------- Magnetic buttons ---------- */
+/* ---------- Boutons magnétiques ---------- */
 if (fine && !reduce) {
   $$('.magnetic').forEach(b => {
     b.addEventListener('mousemove', e => {
       const r = b.getBoundingClientRect();
-      b.style.transform = `translate(${(e.clientX - r.left - r.width / 2) * .25}px, ${(e.clientY - r.top - r.height / 2) * .35}px)`;
+      b.style.transform = `translate(${(e.clientX - r.left - r.width / 2) * .22}px, ${(e.clientY - r.top - r.height / 2) * .3}px)`;
     });
     b.addEventListener('mouseleave', () => { b.style.transform = ''; });
   });
 }
 
-/* ---------- Tilt cards + spotlight ---------- */
+/* ---------- Cartes inclinables ---------- */
 if (fine && !reduce) {
   $$('.tilt').forEach(c => {
     c.addEventListener('mousemove', e => {
       const r = c.getBoundingClientRect();
       const x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height;
-      c.style.transform = `perspective(1000px) rotateY(${(x - .5) * 7}deg) rotateX(${(.5 - y) * 7}deg)`;
-      c.style.setProperty('--mx', x * 100 + '%'); c.style.setProperty('--my', y * 100 + '%');
+      c.style.transform = `perspective(1000px) rotateY(${(x - .5) * 6}deg) rotateX(${(.5 - y) * 6}deg) translateY(-6px)`;
     });
     c.addEventListener('mouseleave', () => { c.style.transform = ''; });
   });
 }
 
-/* ---------- Hero mouse parallax ---------- */
+/* ---------- Parallaxe souris (hero) ---------- */
 const hv = $('#heroVisual');
 if (hv && fine && !reduce) {
   const layers = $$('[data-depth]', hv);
@@ -96,7 +101,7 @@ if (hv && fine && !reduce) {
   });
 }
 
-/* ---------- Scroll parallax images ---------- */
+/* ---------- Parallaxe des images + frise ---------- */
 const para = $$('[data-parallax]');
 const timeline = $('#timeline'), fill = $('#fill');
 const steps = timeline ? $$('.step', timeline) : [];
@@ -105,56 +110,56 @@ const onFrame = () => {
   if (!reduce) para.forEach(img => {
     const r = img.parentElement.getBoundingClientRect();
     if (r.bottom < 0 || r.top > vh) return;
-    const p = (r.top + r.height / 2 - vh / 2);
-    img.style.transform = `translate3d(0, ${p * -+img.dataset.parallax}px, 0)`;
+    img.style.transform = `translate3d(0, ${(r.top + r.height / 2 - vh / 2) * -+img.dataset.parallax}px, 0)`;
   });
-  if (timeline && fill) {
+  if (timeline) {
     const r = timeline.getBoundingClientRect();
-    const p = Math.min(1, Math.max(0, (vh * .75 - r.top) / (r.height + vh * .2)));
-    fill.style.width = p * 100 + '%';
+    const p = Math.min(1, Math.max(0, (vh * .8 - r.top) / (r.height + vh * .2)));
+    if (fill) fill.style.width = p * 100 + '%';
     steps.forEach((s, i) => s.classList.toggle('on', p >= i / steps.length + .02 || p >= .98));
   }
 };
-addEventListener('scroll', () => requestAnimationFrame(onFrame), { passive: true });
+addEventListener('scroll', onFrame, { passive: true });
+addEventListener('resize', onFrame);
 onFrame();
 
-/* ---------- Word highlight on scroll ---------- */
+/* ---------- Texte qui s'allume mot par mot ---------- */
 const split = $('#splitText');
-if (split) {
+if (split && !reduce) {
   split.innerHTML = split.textContent.trim().split(/\s+/).map(w => `<span class="w">${w}</span>`).join(' ');
   const words = $$('.w', split);
   const lit = () => {
     const r = split.getBoundingClientRect();
-    const p = Math.min(1, Math.max(0, (innerHeight * .85 - r.top) / (r.height + innerHeight * .35)));
-    const n = reduce ? words.length : Math.round(p * words.length);
+    const p = Math.min(1, Math.max(0, (innerHeight * .9 - r.top) / (r.height + innerHeight * .3)));
+    const n = Math.round(p * words.length);
     words.forEach((w, i) => w.classList.toggle('lit', i < n));
   };
   addEventListener('scroll', lit, { passive: true }); lit();
 }
 
-/* ---------- Rotating words ---------- */
+/* ---------- Mots qui changent ---------- */
 const rot = $('#rotator');
 if (rot && !reduce) {
   const items = $$(':scope > span', rot); let k = 0;
   setInterval(() => { items[k].classList.remove('on'); k = (k + 1) % items.length; items[k].classList.add('on'); }, 2600);
 }
 
-/* ---------- Counters ---------- */
-let counters = $$('.count');
+/* ---------- Compteurs (la vraie valeur est déjà dans le HTML pour Google) ---------- */
+let counters = reduce ? [] : $$('.count');
 const countCheck = () => {
   counters = counters.filter(el => {
     const r = el.getBoundingClientRect();
     if (r.top > innerHeight * .9 || r.bottom < 0) return true;
-    const to = +el.dataset.to, t0 = performance.now(), dur = 1600;
-    if (reduce) { el.textContent = to; return false; }
+    const to = +el.dataset.to, t0 = performance.now(), dur = 1500;
     const tick = () => { const p = Math.min(1, (performance.now() - t0) / dur); el.textContent = Math.round(to * (1 - Math.pow(1 - p, 3))); if (p < 1) setTimeout(tick, 16); };
     tick(); return false;
   });
 };
-addEventListener('scroll', countCheck, { passive: true }); countCheck();
+addEventListener('scroll', countCheck, { passive: true });
+setTimeout(countCheck, 600);
 setInterval(countCheck, 500);
 
-/* ---------- Neural network canvas ---------- */
+/* ---------- Réseau de neurones animé ---------- */
 const cv = $('#net');
 if (cv && !reduce) {
   const ctx = cv.getContext('2d');
@@ -162,43 +167,51 @@ if (cv && !reduce) {
   const resize = () => {
     const dpr = Math.min(devicePixelRatio || 1, 2);
     w = cv.offsetWidth; h = cv.offsetHeight; cv.width = w * dpr; cv.height = h * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    const n = Math.min(90, Math.floor(w * h / 16000));
-    pts = Array.from({ length: n }, () => ({ x: Math.random() * w, y: Math.random() * h, vx: (Math.random() - .5) * .35, vy: (Math.random() - .5) * .35, g: Math.random() < .18 }));
+    const n = Math.min(80, Math.floor(w * h / 17000));
+    pts = Array.from({ length: n }, () => ({ x: Math.random() * w, y: Math.random() * h, vx: (Math.random() - .5) * .35, vy: (Math.random() - .5) * .35, c: Math.random() }));
   };
   resize(); addEventListener('resize', resize);
   cv.parentElement.addEventListener('mousemove', e => { const r = cv.getBoundingClientRect(); mouse.x = e.clientX - r.left; mouse.y = e.clientY - r.top; });
   cv.parentElement.addEventListener('mouseleave', () => { mouse.x = mouse.y = -999; });
   (function draw() {
     requestAnimationFrame(draw);
-    if (scrollY > h) return; // hors écran : on économise le CPU
+    if (scrollY > h + 200) return;
     ctx.clearRect(0, 0, w, h);
     for (const p of pts) {
       p.x += p.vx; p.y += p.vy;
-      if (p.x < 0 || p.x > w) p.vx *= -1; if (p.y < 0 || p.y > h) p.vy *= -1;
+      if (p.x < 0 || p.x > w) p.vx *= -1;
+      if (p.y < 0 || p.y > h) p.vy *= -1;
       const dx = p.x - mouse.x, dy = p.y - mouse.y, d = Math.hypot(dx, dy);
-      if (d < 140) { p.x += dx / d * 1.2; p.y += dy / d * 1.2; }
+      if (d < 140 && d > 0) { p.x += dx / d * 1.2; p.y += dy / d * 1.2; }
     }
     for (let i = 0; i < pts.length; i++) for (let j = i + 1; j < pts.length; j++) {
       const a = pts[i], b = pts[j], d = Math.hypot(a.x - b.x, a.y - b.y);
-      if (d < 130) { ctx.strokeStyle = `rgba(212,175,106,${(1 - d / 130) * .22})`; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke(); }
+      if (d < 140) { ctx.strokeStyle = `rgba(99,102,241,${(1 - d / 140) * .25})`; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke(); }
     }
-    for (const p of pts) { ctx.fillStyle = p.g ? 'rgba(240,217,164,.9)' : 'rgba(255,255,255,.45)'; ctx.beginPath(); ctx.arc(p.x, p.y, p.g ? 2.2 : 1.4, 0, 7); ctx.fill(); }
+    for (const p of pts) {
+      ctx.fillStyle = p.c < .5 ? 'rgba(79,70,229,.55)' : p.c < .8 ? 'rgba(124,58,237,.55)' : 'rgba(37,99,235,.55)';
+      ctx.beginPath(); ctx.arc(p.x, p.y, p.c > .85 ? 2.6 : 1.7, 0, 7); ctx.fill();
+    }
   })();
 }
 
-/* ---------- Live chat demo ---------- */
+/* ---------- Démo de discussion ---------- */
 const chat = $('#chat');
 if (chat) {
   const script = [
-    ['user', 'Bonjour, je voudrais un devis pour un agent IA.'],
-    ['bot', 'Avec plaisir ! Pour quel usage : <b>support client</b>, <b>prise de rendez-vous</b> ou <b>automatisation</b> ?'],
-    ['user', 'Prise de rendez-vous pour mon cabinet.'],
-    ['bot', 'Parfait. Je vous propose un appel découverte <b>demain à 10h</b> ou <b>14h30</b>. Quel créneau vous convient ?'],
+    ['user', 'Bonjour, je voudrais automatiser la prise de rendez-vous de mon cabinet.'],
+    ['bot', 'Avec plaisir ! Combien de demandes recevez-vous environ <b>par semaine</b> ?'],
+    ['user', 'Une cinquantaine, surtout par téléphone et WhatsApp.'],
+    ['bot', 'Un agent IA peut les gérer pour vous, 24h/24. Je vous propose un appel découverte <b>demain à 10h</b> ou <b>14h30</b> ?'],
     ['user', '14h30, parfait.'],
     ['bot', 'C\'est noté ✅ Rendez-vous confirmé demain à 14h30. Un récapitulatif vient de vous être envoyé par e-mail.'],
   ];
   const wait = ms => new Promise(r => setTimeout(r, ms));
-  const add = (cls, html) => { const d = document.createElement('div'); d.className = cls; d.innerHTML = html; chat.appendChild(d); while (chat.scrollHeight > chat.clientHeight + 4 && chat.children.length > 1) chat.firstElementChild.remove(); return d; };
+  const add = (cls, html) => {
+    const d = document.createElement('div'); d.className = cls; d.innerHTML = html; chat.appendChild(d);
+    while (chat.scrollHeight > chat.clientHeight + 4 && chat.children.length > 1) chat.firstElementChild.remove();
+    return d;
+  };
   let running = false;
   const run = async () => {
     if (running) return; running = true;
@@ -220,7 +233,7 @@ if (chat) {
   }
 }
 
-/* ---------- Contact form ---------- */
+/* ---------- Formulaire de devis ---------- */
 const form = $('#contactForm');
 if (form) {
   form.addEventListener('submit', (e) => {
@@ -228,14 +241,14 @@ if (form) {
     const d = Object.fromEntries(new FormData(form));
     const note = $('#formNote');
     if (!d.nom || !d.email || !d.message) {
-      note.textContent = 'Merci de renseigner votre nom, votre e-mail et votre message.';
-      note.style.color = '#f08a7a'; return;
+      note.textContent = 'Merci de renseigner votre nom, votre e-mail et la description de votre projet.';
+      note.style.color = '#dc2626'; return;
     }
-    const subject = `Demande de contact — ${d.besoin} — ${d.nom}`;
-    const body = `Nom : ${d.nom}\nEntreprise : ${d.entreprise || '-'}\nE-mail : ${d.email}\nTéléphone : ${d.tel || '-'}\nBesoin : ${d.besoin}\n\n${d.message}`;
-    location.href = `mailto:info.alystra@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const subject = `Demande de devis — ${d.besoin} — ${d.nom}`;
+    const body = `Nom : ${d.nom}\nEntreprise : ${d.entreprise || '-'}\nE-mail : ${d.email}\nTéléphone : ${d.tel || '-'}\nBesoin : ${d.besoin}\nBudget : ${d.budget}\n\n${d.message}`;
+    location.href = `mailto:contact@alystra.tech?cc=info.alystra@gmail.com&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     note.textContent = 'Merci ! Votre messagerie s\'ouvre pour finaliser l\'envoi.';
-    note.style.color = '#4ade80';
+    note.style.color = '#16a34a';
   });
 }
 

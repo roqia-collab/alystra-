@@ -4,17 +4,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mentions légales — Alystra</title>
-  <meta name="robots" content="noindex" />
+  <meta name="description" content="Mentions légales du site Alystra." />
+  <link rel="canonical" href="https://alystra.tech/mentions-legales.html" />
+  <meta property="og:title" content="Mentions légales — Alystra" />
+  <meta property="og:description" content="Mentions légales du site Alystra." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://alystra.tech/mentions-legales.html" />
+  <meta property="og:image" content="https://alystra.tech/assets/logo-original.png" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta name="theme-color" content="#4f46e5" />
   <link rel="icon" type="image/svg+xml" href="assets/logo-mark.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=2" />
+  <meta name="robots" content="noindex" />
 </head>
 <body>
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
     <defs>
-      <linearGradient id="goldGrad" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#a8823e"/><stop offset=".55" stop-color="#d6b26a"/><stop offset="1" stop-color="#f0d9a4"/></linearGradient>
+      <linearGradient id="goldGrad" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#a8823e"/><stop offset=".55" stop-color="#d6b26a"/><stop offset="1" stop-color="#e9cf95"/></linearGradient>
       <symbol id="mark" viewBox="0 0 200 200">
         <path d="M97 14 L106 14 L52 182 L36 182 Z" fill="currentColor"/>
         <path d="M95 14 L112 14 L174 182 L142 182 Z" fill="currentColor"/>
@@ -24,7 +33,7 @@
   </svg>
   <div class="progress" id="progress"></div>
   <div class="cursor-glow" id="glow"></div>
-  <div class="noise"></div>
+
   <header class="header" id="header">
     <div class="container">
       <div class="header-inner">
@@ -32,15 +41,37 @@
           <svg><use href="#mark"/></svg>
           <span class="wordmark">ΛLYSTRΛ</span>
         </a>
-        <nav class="nav" id="nav">
-          <a href="index.html#services">Services</a>
-          <a href="index.html#agents-ia">Agents IA</a>
-          <a href="index.html#contact" class="btn btn-gold">Nous contacter</a>
+        <nav class="nav" aria-label="Navigation principale">
+          <div class="dd">
+            <button type="button" aria-haspopup="true">Expertises <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 9l6 6 6-6"/></svg></button>
+            <div class="dd-menu">
+              <a href="agents-ia.html"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="7" width="16" height="12" rx="3"/><path d="M12 3v4M9 12h.01M15 12h.01M9 16h6"/></svg></span><span><b>Agents IA & automatisation</b><small>Chatbots, agents métiers, automatisation des processus</small></span></a>
+              <a href="developpement-web-mobile.html"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 9l-4 3 4 3M16 9l4 3-4 3M14 5l-4 14"/></svg></span><span><b>Développement d'applications & sites web</b><small>Sites vitrines, e-commerce, applications mobiles et web</small></span></a>
+              <a href="conseil-strategie.html"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg></span><span><b>Conseil & stratégie</b><small>Audit, feuille de route IA, organisation et pilotage</small></span></a>
+            </div>
+          </div>
+          <a href="agents-ia.html">Agents IA</a>
+          <a href="developpement-web-mobile.html">Apps & sites web</a>
+          <a href="index.html#methode">Méthode</a>
+          <a href="index.html#faq">FAQ</a>
+          <a href="index.html#contact" class="btn btn-primary magnetic">Demander un devis</a>
         </nav>
-        <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span></button>
+        <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mmenu"><span></span><span></span></button>
       </div>
     </div>
   </header>
+
+  <div class="mmenu" id="mmenu">
+    <a href="index.html">Accueil</a>
+    <a href="index.html#expertises">Expertises</a>
+    <a class="sub" href="agents-ia.html">Agents IA & automatisation</a>
+    <a class="sub" href="developpement-web-mobile.html">Développement d'applications & sites web</a>
+    <a class="sub" href="conseil-strategie.html">Conseil & stratégie</a>
+    <a href="index.html#methode">Méthode</a>
+    <a href="index.html#faq">FAQ</a>
+    <a href="index.html#contact" class="btn btn-primary">Demander un devis <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <div class="m-contact"><a href="tel:+33785138224">+33 7 85 13 82 24</a><a href="mailto:contact@alystra.tech">contact@alystra.tech</a></div>
+  </div>
 
   <main class="legal">
     <div class="container" style="max-width:860px">
@@ -53,29 +84,28 @@
         <p>Capital social : 1 000 €</p>
         <p>Siège social : 8 Villa Guizot, 75017 Paris, France</p>
         <p>SIRET : 992 688 630 00019 — RCS Paris 992 688 630</p>
-        <p>Code APE : 7022Z (Conseil pour les affaires et autres conseils de gestion)</p>
+        <p>Code APE : 7022Z</p>
         <p>N° TVA intracommunautaire : FR32 992688630</p>
         <p>Téléphone : <a href="tel:+33785138224">+33 7 85 13 82 24</a></p>
-        <p>E-mail : <a href="mailto:info.alystra@gmail.com">info.alystra@gmail.com</a></p>
+        <p>E-mail : <a href="mailto:contact@alystra.tech">contact@alystra.tech</a></p>
         <p>Directeur de la publication : Mohamed Mehri, Président</p>
       </div>
 
       <h2>Hébergement</h2>
       <div class="box">
-        <p>[Nom de l'hébergeur] — [Adresse de l'hébergeur] — [Téléphone de l'hébergeur]</p>
+        <p>Hostinger International Ltd</p>
+        <p>61 Lordou Vironos Street, 6023 Larnaca, Chypre</p>
+        <p>Site : <a href="https://www.hostinger.fr" rel="noopener">www.hostinger.fr</a></p>
       </div>
 
-      <h2>Assurance professionnelle</h2>
-      <p>Responsabilité civile professionnelle souscrite auprès d'ORUS. Couverture géographique : France.</p>
-
       <h2>Activité</h2>
-      <p>Prestations de conseil et d'assistance aux entreprises et autres organisations en matière de stratégie et de gestion ; conception de solutions technologiques et d'agents d'intelligence artificielle ; développement et commercialisation d'applications mobiles ; développement et exploitation de plateformes en ligne ; vente en ligne et import-export de produits non réglementés.</p>
+      <p>Conseil et assistance aux entreprises en matière de stratégie et de gestion ; conception d'agents d'intelligence artificielle et automatisation des processus ; développement d'applications mobiles, d'applications web et de sites internet ; développement et exploitation de plateformes en ligne.</p>
 
       <h2>Propriété intellectuelle</h2>
-      <p>L'ensemble des contenus de ce site (textes, logo, visuels, charte graphique) est la propriété exclusive d'Alystra, sauf mention contraire. Toute reproduction, représentation ou diffusion, totale ou partielle, sans autorisation écrite préalable est interdite.</p>
+      <p>L'ensemble des contenus de ce site (textes, logo, charte graphique) est la propriété d'Alystra, sauf mention contraire. Les photographies proviennent de la banque d'images Unsplash. Toute reproduction sans autorisation écrite préalable est interdite.</p>
 
       <h2>Données personnelles</h2>
-      <p>Les informations transmises via le formulaire de contact ou par e-mail sont utilisées uniquement pour répondre à votre demande et ne sont jamais cédées à des tiers. Conformément au Règlement général sur la protection des données (RGPD) et à la loi « Informatique et Libertés », vous disposez d'un droit d'accès, de rectification, d'effacement et d'opposition sur vos données. Pour l'exercer, écrivez à <a href="mailto:info.alystra@gmail.com">info.alystra@gmail.com</a>. Vous pouvez également introduire une réclamation auprès de la CNIL (www.cnil.fr).</p>
+      <p>Les informations transmises par e-mail ou via le formulaire de contact sont utilisées uniquement pour répondre à votre demande et ne sont jamais cédées à des tiers. Conformément au RGPD et à la loi « Informatique et Libertés », vous disposez d'un droit d'accès, de rectification, d'effacement et d'opposition. Pour l'exercer : <a href="mailto:contact@alystra.tech">contact@alystra.tech</a>. Vous pouvez également introduire une réclamation auprès de la CNIL (www.cnil.fr).</p>
 
       <h2>Cookies</h2>
       <p>Ce site n'utilise pas de cookies de suivi ou publicitaires.</p>
@@ -83,18 +113,56 @@
       <h2>Droit applicable</h2>
       <p>Le présent site et ses mentions légales sont soumis au droit français.</p>
 
-      <p style="margin-top:40px"><a href="index.html" class="btn btn-gold">← Retour à l'accueil</a></p>
+      <p style="margin-top:40px"><a href="index.html" class="btn btn-primary">← Retour à l'accueil</a></p>
     </div>
   </main>
 
-  <footer style="padding-top:30px">
+  <footer>
     <div class="container">
-      <div class="foot-legal" style="margin-top:0;border-top:0;padding-top:0">
+      <div class="foot-big" aria-hidden="true">ALYSTRA</div>
+      <div class="foot-grid">
+        <div>
+          <a href="index.html" class="brand" style="margin-bottom:18px">
+            <svg><use href="#mark"/></svg>
+            <span class="wordmark">ΛLYSTRΛ</span>
+          </a>
+          <p>Agence IA et développement à Paris : agents IA, automatisation, applications et sites web, conseil en stratégie.</p>
+        </div>
+        <div>
+          <h4>Expertises</h4>
+          <ul>
+            <li><a href="agents-ia.html">Agents IA & automatisation</a></li>
+            <li><a href="developpement-web-mobile.html">Développement d'applications & sites web</a></li>
+            <li><a href="conseil-strategie.html">Conseil & stratégie</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+33785138224">+33 7 85 13 82 24</a></li>
+            <li><a href="mailto:contact@alystra.tech">contact@alystra.tech</a></li>
+            <li><a href="mailto:info.alystra@gmail.com">info.alystra@gmail.com</a></li>
+            <li>8 Villa Guizot, 75017 Paris</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Informations légales</h4>
+          <ul>
+            <li>ALYSTRA — SASU</li>
+            <li>SIRET : 992 688 630 00019</li>
+            <li>RCS Paris 992 688 630 · APE 7022Z</li>
+            <li>TVA : FR32 992688630</li>
+            <li><a href="mentions-legales.html">Mentions légales</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot-legal">
         <span>© <span id="year">2026</span> Alystra. Tous droits réservés.</span>
-        <span>RC Pro souscrite auprès d'ORUS · Couverture géographique : France</span>
+        <span>Paris · Intervention dans toute la France</span>
       </div>
     </div>
   </footer>
-  <script src="script.js"></script>
+
+  <script src="script.js?v=2"></script>
 </body>
 </html>
