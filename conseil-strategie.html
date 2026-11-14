@@ -18,11 +18,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css?v=5" />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="editorial.css?v=2" />
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://alystra.tech/"}, {"@type": "ListItem", "position": 2, "name": "Conseil & stratégie", "item": "https://alystra.tech/conseil-strategie.html"}]}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "Conseil & stratégie", "description": "Audit IA, feuille de route digitale, stratégie et gestion d'entreprise, optimisation des processus et formation à l'IA. Cabinet de conseil Alystra à Paris.", "provider": {"@type": "Organization", "name": "Alystra", "url": "https://alystra.tech"}, "areaServed": "FR"}</script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "À qui s'adresse le conseil Alystra ?", "acceptedAnswer": {"@type": "Answer", "text": "Aux dirigeants d'entreprises, PME, indépendants et organisations qui veulent structurer leur croissance et intégrer l'IA et le digital de façon rentable."}}, {"@type": "Question", "name": "Comment se déroule un audit ?", "acceptedAnswer": {"@type": "Answer", "text": "Nous échangeons avec vous et vos équipes, analysons vos outils et vos processus, puis nous vous remettons un diagnostic et un plan d'action priorisé."}}, {"@type": "Question", "name": "Pouvez-vous aussi mettre en œuvre les recommandations ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. C'est la force d'Alystra : nous pouvons réaliser nous-mêmes les agents IA, automatisations, sites et applications recommandés."}}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "À qui s'adresse le conseil Alystra ?", "acceptedAnswer": {"@type": "Answer", "text": "Aux dirigeants d'entreprises, PME, indépendants et organisations qui veulent structurer leur croissance et intégrer l'IA et le digital de façon rentable."}}, {"@type": "Question", "name": "Comment se déroule un audit ?", "acceptedAnswer": {"@type": "Answer", "text": "Nous échangeons avec vous et vos équipes, analysons vos outils et vos processus, puis nous vous remettons un diagnostic et un plan d'action priorisé."}}, {"@type": "Question", "name": "Pouvez-vous aussi mettre en œuvre les recommandations ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. C'est la force d'Alystra : nous pouvons réaliser nous-mêmes les agents IA, automatisations, sites et applications recommandés."}}, {"@type": "Question", "name": "Intervenez-vous sur place ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, à Paris et partout en France, sur place ou à distance selon vos besoins."}}]}</script>
 </head>
-<body>
+<body class="ed-page">
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
     <defs>
       <linearGradient id="brandGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2563eb"/><stop offset=".55" stop-color="#4f46e5"/><stop offset="1" stop-color="#9333ea"/></linearGradient>
@@ -78,88 +80,190 @@
     <div class="m-contact"><a href="tel:+33785138224">+33 7 85 13 82 24</a><a href="mailto:contact@alystra.tech">contact@alystra.tech</a></div>
   </div>
 
-  <main>
-    <section class="page-hero">
-      <canvas id="net" aria-hidden="true"></canvas>
-      <div class="blob b1"></div><div class="blob b2"></div>
-      <div class="container grid">
-        <div>
-          <p class="crumbs fade-up"><a href="index.html">Accueil</a> / Conseil & stratégie</p>
-          <h1 class="fade-up d1" style="margin-top:18px">Le conseil qui <span class="grad">passe à l'action</span></h1>
-          <p class="lead fade-up d2">Audit, feuille de route IA, organisation et pilotage : nous vous aidons à prendre les bonnes décisions, puis à les mettre en œuvre concrètement.</p>
-          <div class="hero-cta fade-up d3">
-            <a href="index.html#contact" class="btn btn-primary magnetic">Demander un devis <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-            <a href="tel:+33785138224" class="btn btn-ghost magnetic">Nous appeler</a>
-          </div>
-        </div>
-        <div class="ph fade-up d2"><img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=80" alt="Conseil en stratégie d'entreprise" /></div>
-      </div>
-    </section>
-
-    <section class="block">
+  <main class="ed">
+    <section class="ed-hero">
       <div class="container">
-        <div class="head center reveal">
-          <span class="eyebrow"><i></i> Nos missions</span>
-          <h2>Un accompagnement <span class="grad">stratégique</span> et concret</h2>
-          <p>Nous vous aidons à prendre les bonnes décisions, puis à les mettre en œuvre.</p>
-        </div>
-        <div class="feat-grid">
-          <article class="box reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div><h3>Audit & diagnostic</h3><p>État des lieux de votre organisation, de vos outils et de vos processus.</p><ul><li>Analyse des processus</li><li>Identification des pertes de temps</li><li>Priorités d'action</li></ul></article>
-          <article class="box reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg></div><h3>Feuille de route IA & digitale</h3><p>Un plan clair et chiffré pour intégrer l'IA et le digital dans votre entreprise.</p><ul><li>Cas d'usage prioritaires</li><li>Estimation des gains</li><li>Planning de déploiement</li></ul></article>
-          <article class="box reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 6-6"/></svg></div><h3>Stratégie & gestion</h3><p>Accompagnement des dirigeants sur la stratégie, l'organisation et le pilotage.</p><ul><li>Plan stratégique</li><li>Indicateurs de pilotage</li><li>Organisation des équipes</li></ul></article>
-          <article class="box reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="6" height="6" rx="1.5"/><rect x="15" y="15" width="6" height="6" rx="1.5"/><path d="M9 6h4a2 2 0 012 2v7"/></svg></div><h3>Optimisation des processus</h3><p>Simplifier et automatiser vos flux pour gagner en efficacité.</p><ul><li>Cartographie des flux</li><li>Automatisations ciblées</li><li>Suivi des résultats</li></ul></article>
-          <article class="box reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2 20c0-3.5 3-6 7-6s7 2.5 7 6M16 4.5a3.5 3.5 0 010 7M18 14c2.4.6 4 2.8 4 6"/></svg></div><h3>Conduite du changement</h3><p>Embarquer vos équipes pour réussir l'adoption des nouveaux outils.</p><ul><li>Communication interne</li><li>Formation</li><li>Accompagnement terrain</li></ul></article>
-          <article class="box reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg></div><h3>Formation à l'IA</h3><p>Former vos collaborateurs à l'IA générative pour un usage efficace et sécurisé.</p><ul><li>Ateliers pratiques</li><li>Bonnes pratiques</li><li>Règles de sécurité</li></ul></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="block alt">
-      <div class="container">
-        <div class="head center reveal">
-          <span class="eyebrow"><i></i> Notre méthode</span>
-          <h2>Comment <span class="grad">ça se passe</span></h2>
-        </div>
-        <div class="timeline" id="timeline">
-          <div class="track"><div class="fill" id="fill"></div></div>
-          <div class="step"><div class="dot">01</div><h3>Échange & diagnostic</h3><p>Nous analysons vos besoins, vos processus et vos objectifs, gratuitement et sans engagement.</p></div>
-          <div class="step"><div class="dot">02</div><h3>Proposition & devis</h3><p>Une solution claire, un planning et un devis détaillé, priorisés selon le retour sur investissement.</p></div>
-          <div class="step"><div class="dot">03</div><h3>Conception & développement</h3><p>Nous construisons la solution avec des démonstrations régulières pour valider chaque étape.</p></div>
-          <div class="step"><div class="dot">04</div><h3>Mise en ligne & suivi</h3><p>Déploiement, formation de vos équipes, maintenance et amélioration continue.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="block">
-      <div class="container">
-        <div class="head center reveal">
-          <span class="eyebrow"><i></i> FAQ</span>
-          <h2>Questions <span class="grad">fréquentes</span></h2>
-        </div>
-        <div class="faq">
-          <details class="reveal"><summary>À qui s'adresse le conseil Alystra ?</summary><p>Aux dirigeants d'entreprises, PME, indépendants et organisations qui veulent structurer leur croissance et intégrer l'IA et le digital de façon rentable.</p></details>
-          <details class="reveal"><summary>Comment se déroule un audit ?</summary><p>Nous échangeons avec vous et vos équipes, analysons vos outils et vos processus, puis nous vous remettons un diagnostic et un plan d'action priorisé.</p></details>
-          <details class="reveal"><summary>Pouvez-vous aussi mettre en œuvre les recommandations ?</summary><p>Oui. C'est la force d'Alystra : nous pouvons réaliser nous-mêmes les agents IA, automatisations, sites et applications recommandés.</p></details>
-        </div>
-      </div>
-    </section>
-
-    <section class="cta">
-      <div class="container">
-        <div class="cta-box reveal">
-          <div class="rings" aria-hidden="true"><i></i><i></i><i></i></div>
-          <div class="inner">
-            <h2>Besoin d'y voir plus clair <br/>sur l'IA et le digital ?</h2>
-            <p>Un premier échange suffit pour identifier vos priorités et les gains possibles.</p>
-            <div class="btns">
-              <a href="index.html#contact" class="btn btn-white magnetic">Demander un devis <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-              <a href="tel:+33785138224" class="btn btn-outline-white magnetic">Appeler le +33 7 85 13 82 24</a>
+        <div class="ed-meta fade-up"><a href="index.html">Accueil</a><span>/</span><span>Conseil & stratégie</span></div>
+        <h1 class="ed-h1">
+          <span class="line"><span>Le conseil qui</span></span>
+          <span class="line"><span>ne s'arrête pas</span></span>
+          <span class="line"><span>au <em>rapport.</em></span></span>
+        </h1>
+        <div class="ed-hero-grid">
+          <div class="ed-hero-img reveal-img"><img data-parallax="0.06" src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=80" alt="Séance de conseil en stratégie" /></div>
+          <div class="ed-hero-side fade-up d2">
+            <p class="ed-lead">Audit, feuille de route IA, organisation et pilotage : nous vous aidons à prendre les bonnes décisions, puis nous pouvons les mettre en œuvre avec vous.</p>
+            <div class="ed-cta">
+              <a href="index.html#contact" class="ed-btn">Demander un devis <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <a href="tel:+33785138224" class="ed-link">ou appeler le 07 85 13 82 24</a>
             </div>
+            <dl class="ed-facts"><div><dt>6</dt><dd>missions</dd></div><div><dt>Audit</dt><dd>→ action</dd></div><div><dt>France</dt><dd>entière</dd></div></dl>
           </div>
         </div>
       </div>
     </section>
 
+    <section class="ed-sec">
+      <div class="container">
+        <div class="ed-head">
+          <p class="ed-kicker reveal">(01) — Nos missions</p>
+          <h2 class="ed-h2 reveal">Un regard extérieur, <em>des actions concrètes.</em></h2>
+        </div>
+        <ol class="idx">
+          <li class="idx-row reveal" data-img="https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=1200&q=80">
+            <span class="idx-n">01</span>
+            <h3 class="idx-t">Audit & diagnostic</h3>
+            <p class="idx-d">État des lieux de votre organisation, de vos outils et de vos processus, pour savoir où vous perdez du temps.</p>
+            <span class="idx-tags"><span>Processus</span><span>Outils</span><span>Priorités</span></span>
+            <span class="idx-go" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </li>
+          <li class="idx-row reveal" data-img="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1200&q=80">
+            <span class="idx-n">02</span>
+            <h3 class="idx-t">Feuille de route IA & digitale</h3>
+            <p class="idx-d">Un plan clair et chiffré pour intégrer l'IA et le digital là où ils rapportent vraiment.</p>
+            <span class="idx-tags"><span>Cas d'usage</span><span>Gains estimés</span><span>Planning</span></span>
+            <span class="idx-go" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </li>
+          <li class="idx-row reveal" data-img="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=80">
+            <span class="idx-n">03</span>
+            <h3 class="idx-t">Stratégie & gestion</h3>
+            <p class="idx-d">Accompagnement des dirigeants sur la stratégie, l'organisation et le pilotage de l'activité.</p>
+            <span class="idx-tags"><span>Plan stratégique</span><span>Indicateurs</span><span>Organisation</span></span>
+            <span class="idx-go" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </li>
+          <li class="idx-row reveal" data-img="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80">
+            <span class="idx-n">04</span>
+            <h3 class="idx-t">Optimisation des processus</h3>
+            <p class="idx-d">Simplifier et automatiser vos flux pour gagner en efficacité au quotidien.</p>
+            <span class="idx-tags"><span>Cartographie</span><span>Automatisations</span><span>Suivi</span></span>
+            <span class="idx-go" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </li>
+          <li class="idx-row reveal" data-img="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1200&q=80">
+            <span class="idx-n">05</span>
+            <h3 class="idx-t">Conduite du changement</h3>
+            <p class="idx-d">Embarquer vos équipes pour que les nouveaux outils soient réellement adoptés.</p>
+            <span class="idx-tags"><span>Communication</span><span>Formation</span><span>Terrain</span></span>
+            <span class="idx-go" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </li>
+          <li class="idx-row reveal" data-img="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1400&q=80">
+            <span class="idx-n">06</span>
+            <h3 class="idx-t">Formation à l'IA</h3>
+            <p class="idx-d">Former vos collaborateurs à l'IA générative pour un usage efficace et sécurisé.</p>
+            <span class="idx-tags"><span>Ateliers</span><span>Bonnes pratiques</span><span>Sécurité</span></span>
+            <span class="idx-go" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </li>
+        </ol>
+      </div>
+      <div class="idx-preview" aria-hidden="true"><img alt="" /></div>
+    </section>
+
+    <section class="ed-sec ed-paper">
+      <div class="container">
+        <div class="ed-head">
+          <p class="ed-kicker reveal">(02) — Situations</p>
+          <h2 class="ed-h2 reveal">Quand faire appel <em>à nous.</em></h2>
+        </div>
+        <div class="uc">
+          <div class="uc-tabs reveal"><button type="button" class="uc-tab on" data-k="0"><span>01</span>Croissance rapide</button><button type="button" class="uc-tab" data-k="1"><span>02</span>Équipes débordées</button><button type="button" class="uc-tab" data-k="2"><span>03</span>Projet IA sans cap</button><button type="button" class="uc-tab" data-k="3"><span>04</span>Outils mal utilisés</button></div>
+          <div class="uc-panes reveal">
+            <article class="uc-pane on" data-k="0">
+              <div class="uc-img"><img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1200&q=80" alt="Croissance rapide" loading="lazy" /></div>
+              <div class="uc-txt">
+                <h3>Croissance rapide</h3>
+                <p>L'activité augmente plus vite que l'organisation. Nous structurons les rôles, les outils et les indicateurs pour suivre le rythme.</p>
+                <ul><li>Organisation</li><li>Indicateurs</li><li>Outils adaptés</li></ul>
+              </div>
+            </article>
+            <article class="uc-pane" data-k="1">
+              <div class="uc-img"><img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=80" alt="Équipes débordées" loading="lazy" /></div>
+              <div class="uc-txt">
+                <h3>Équipes débordées</h3>
+                <p>Trop de tâches répétitives, trop de ressaisies. Nous identifions ce qui peut être simplifié ou automatisé en priorité.</p>
+                <ul><li>Tâches répétitives</li><li>Automatisation</li><li>Gain de temps</li></ul>
+              </div>
+            </article>
+            <article class="uc-pane" data-k="2">
+              <div class="uc-img"><img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=1200&q=80" alt="Projet IA sans cap" loading="lazy" /></div>
+              <div class="uc-txt">
+                <h3>Projet IA sans cap</h3>
+                <p>Vous voulez « faire de l'IA » sans savoir par où commencer. Nous choisissons avec vous les cas d'usage les plus rentables.</p>
+                <ul><li>Cas d'usage</li><li>Retour sur investissement</li><li>Feuille de route</li></ul>
+              </div>
+            </article>
+            <article class="uc-pane" data-k="3">
+              <div class="uc-img"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80" alt="Outils mal utilisés" loading="lazy" /></div>
+              <div class="uc-txt">
+                <h3>Outils mal utilisés</h3>
+                <p>Des logiciels payés mais peu utilisés, des données éparpillées. Nous remettons de la cohérence et formons vos équipes.</p>
+                <ul><li>Audit des outils</li><li>Données</li><li>Formation</li></ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ed-sec">
+      <div class="container">
+        <div class="ed-head">
+          <p class="ed-kicker reveal">(03) — Exemple de mission</p>
+          <h2 class="ed-h2 reveal">Une PME qui veut se lancer dans l'IA, <em>sans savoir par où commencer.</em></h2>
+        </div>
+        <div class="ba reveal">
+          <div class="ba-col">
+            <p class="ba-label">Avant</p>
+            <ul><li>Beaucoup d'idées, mais aucune priorité claire.</li><li>Des outils testés au hasard, sans résultat mesurable.</li><li>Des équipes inquiètes ou sceptiques face au changement.</li></ul>
+          </div>
+          <div class="ba-arrow" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+          <div class="ba-col ba-after">
+            <p class="ba-label">Avec Alystra</p>
+            <ul><li>Trois cas d'usage prioritaires, choisis pour leur rentabilité.</li><li>Une feuille de route chiffrée, étape par étape.</li><li>Des équipes formées et impliquées dès le départ.</li></ul>
+          </div>
+        </div>
+        <p class="ed-note reveal">Scénario illustratif : chaque mission est adaptée à votre entreprise et à vos enjeux.</p>
+      </div>
+    </section>
+
+    <section class="ed-sec ed-paper">
+      <div class="container">
+        <div class="ed-head">
+          <p class="ed-kicker reveal">(04) — Méthode</p>
+          <h2 class="ed-h2 reveal">Quatre étapes, <em>aucune surprise.</em></h2>
+        </div>
+        <ol class="ed-steps">
+          <li class="reveal"><span>01</span><h3>Échange & cadrage</h3><p>Vos enjeux, votre contexte, vos objectifs : nous définissons le périmètre de la mission.</p></li>
+          <li class="reveal"><span>02</span><h3>Diagnostic</h3><p>Entretiens, analyse des outils et des processus, identification des priorités.</p></li>
+          <li class="reveal"><span>03</span><h3>Recommandations</h3><p>Un plan d'action clair, chiffré et priorisé, présenté et discuté avec vous.</p></li>
+          <li class="reveal"><span>04</span><h3>Mise en œuvre</h3><p>Nous pouvons réaliser nous-mêmes les solutions recommandées et suivre les résultats.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="ed-sec">
+      <div class="container ed-faq">
+        <div>
+          <p class="ed-kicker reveal">(05) — Questions</p>
+          <h2 class="ed-h2 reveal">Ce que l'on nous <em>demande</em> souvent.</h2>
+        </div>
+        <div class="ed-qs">
+          <details class="ed-q reveal"><summary><span>À qui s'adresse le conseil Alystra ?</span><i aria-hidden="true"></i></summary><p>Aux dirigeants d'entreprises, PME, indépendants et organisations qui veulent structurer leur croissance et intégrer l'IA et le digital de façon rentable.</p></details>
+          <details class="ed-q reveal"><summary><span>Comment se déroule un audit ?</span><i aria-hidden="true"></i></summary><p>Nous échangeons avec vous et vos équipes, analysons vos outils et vos processus, puis nous vous remettons un diagnostic et un plan d'action priorisé.</p></details>
+          <details class="ed-q reveal"><summary><span>Pouvez-vous aussi mettre en œuvre les recommandations ?</span><i aria-hidden="true"></i></summary><p>Oui. C'est la force d'Alystra : nous pouvons réaliser nous-mêmes les agents IA, automatisations, sites et applications recommandés.</p></details>
+          <details class="ed-q reveal"><summary><span>Intervenez-vous sur place ?</span><i aria-hidden="true"></i></summary><p>Oui, à Paris et partout en France, sur place ou à distance selon vos besoins.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="ed-end">
+      <div class="container">
+        <p class="ed-kicker light reveal">Parlons de votre entreprise</p>
+        <h2 class="ed-end-h reveal">Par quoi faudrait-il <em>commencer</em> chez vous&nbsp;?</h2>
+        <div class="ed-end-cta reveal">
+          <a href="index.html#contact" class="ed-btn light">Demander un devis <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a href="mailto:contact@alystra.tech" class="ed-link light">contact@alystra.tech</a>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer>
@@ -208,6 +312,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=5"></script>
+  <script src="script.js?v=6"></script>
 </body>
 </html>

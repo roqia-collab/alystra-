@@ -18,11 +18,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css?v=5" />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="editorial.css?v=2" />
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://alystra.tech/"}, {"@type": "ListItem", "position": 2, "name": "Développement d'applications & sites web", "item": "https://alystra.tech/developpement-web-mobile.html"}]}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "Développement d'applications & sites web", "description": "Création de sites vitrines et e-commerce, développement d'applications mobiles iOS/Android et d'applications web sur mesure. Agence basée à Paris. Devis personnalisé.", "provider": {"@type": "Organization", "name": "Alystra", "url": "https://alystra.tech"}, "areaServed": "FR"}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Combien coûte un site web ?", "acceptedAnswer": {"@type": "Answer", "text": "Le prix dépend du type de site (vitrine, e-commerce, plateforme), du nombre de pages et des fonctionnalités. Nous vous remettons un devis détaillé après un premier échange."}}, {"@type": "Question", "name": "Combien de temps pour créer une application mobile ?", "acceptedAnswer": {"@type": "Answer", "text": "Le délai dépend des fonctionnalités. Nous définissons ensemble une première version ciblée pour lancer rapidement, puis nous la faisons évoluer."}}, {"@type": "Question", "name": "Pourrai-je modifier mon site moi-même ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, si vous le souhaitez : nous pouvons prévoir une interface simple pour modifier vos textes, images et produits."}}, {"@type": "Question", "name": "Assurez-vous l'hébergement et la maintenance ?", "acceptedAnswer": {"@type": "Answer", "text": "Nous pouvons vous accompagner sur la mise en ligne, l'hébergement et la maintenance pour que votre site reste rapide et sécurisé."}}]}</script>
 </head>
-<body>
+<body class="ed-page">
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
     <defs>
       <linearGradient id="brandGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2563eb"/><stop offset=".55" stop-color="#4f46e5"/><stop offset="1" stop-color="#9333ea"/></linearGradient>
@@ -78,104 +80,190 @@
     <div class="m-contact"><a href="tel:+33785138224">+33 7 85 13 82 24</a><a href="mailto:contact@alystra.tech">contact@alystra.tech</a></div>
   </div>
 
-  <main>
-    <section class="page-hero">
-      <canvas id="net" aria-hidden="true"></canvas>
-      <div class="blob b1"></div><div class="blob b2"></div>
-      <div class="container grid">
-        <div>
-          <p class="crumbs fade-up"><a href="index.html">Accueil</a> / Développement d'applications & sites web</p>
-          <h1 class="fade-up d1" style="margin-top:18px">Applications & sites web <span class="grad">sur mesure</span></h1>
-          <p class="lead fade-up d2">Sites vitrines, e-commerce, applications mobiles et plateformes : nous concevons des outils digitaux modernes, rapides et pensés pour développer votre activité.</p>
-          <div class="hero-cta fade-up d3">
-            <a href="index.html#contact" class="btn btn-primary magnetic">Demander un devis <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-            <a href="tel:+33785138224" class="btn btn-ghost magnetic">Nous appeler</a>
-          </div>
-        </div>
-        <div class="ph fade-up d2"><img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1200&q=80" alt="Développement d'applications et de sites web" /></div>
-      </div>
-    </section>
-
-    <section class="block">
+  <main class="ed">
+    <section class="ed-hero">
       <div class="container">
-        <div class="head center reveal">
-          <span class="eyebrow"><i></i> Nos offres</span>
-          <h2>Ce que nous <span class="grad">développons</span></h2>
-          <p>Des projets sur mesure, du site vitrine à l'application complète.</p>
-        </div>
-        <div class="feat-grid">
-          <article class="box reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg></div><h3>Site vitrine</h3><p>Un site professionnel qui présente votre activité et génère des demandes de contact.</p><ul><li>Design sur mesure</li><li>Optimisé pour Google (SEO)</li><li>Formulaire de devis</li></ul></article>
-          <article class="box reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2l2.4 11.2a2 2 0 002 1.6h7.7a2 2 0 002-1.5L21 8H6"/><circle cx="10" cy="20" r="1.3"/><circle cx="17" cy="20" r="1.3"/></svg></div><h3>Site e-commerce</h3><p>Une boutique en ligne pour vendre vos produits simplement et en toute sécurité.</p><ul><li>Paiement sécurisé</li><li>Gestion des produits et commandes</li><li>Expérience mobile soignée</li></ul></article>
-          <article class="box reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2.5"/><path d="M11 18h2"/></svg></div><h3>Application mobile</h3><p>Une application iOS et Android pour vos clients ou vos équipes.</p><ul><li>Conception UX/UI</li><li>Développement & tests</li><li>Publication sur les stores</li></ul></article>
-          <article class="box reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l10 5-10 5L2 7z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div><h3>Application web & plateforme</h3><p>Outils métiers, espaces clients, plateformes de mise en relation.</p><ul><li>Abonnements & paiements</li><li>Tableaux de bord</li><li>Gestion des utilisateurs</li></ul></article>
-          <article class="box reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="7" width="16" height="12" rx="3"/><path d="M12 3v4M9 12h.01M15 12h.01M9 16h6"/></svg></div><h3>Site + agent IA intégré</h3><p>Un site qui répond à vos visiteurs et qualifie vos prospects automatiquement.</p><ul><li>Chatbot sur mesure</li><li>Prise de rendez-vous</li><li>Transmission des leads</li></ul></article>
-          <article class="box reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 00-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 005.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg></div><h3>Maintenance & évolutions</h3><p>Votre site ou application reste rapide, sécurisé et à jour.</p><ul><li>Mises à jour & sécurité</li><li>Nouvelles fonctionnalités</li><li>Suivi des performances</li></ul></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="block alt">
-      <div class="container">
-        <div class="head center reveal">
-          <span class="eyebrow"><i></i> Nos engagements</span>
-          <h2>Un site ou une app <span class="grad">qui vous rapporte</span></h2>
-          <p>Nous ne livrons pas seulement un beau design : nous visons des résultats.</p>
-        </div>
-        <div class="feat-grid">
-          <article class="box reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div><h3>Pensé pour Google</h3><p>Structure, vitesse et contenus optimisés pour être trouvé par vos futurs clients.</p></article>
-          <article class="box reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></div><h3>Pensé pour convertir</h3><p>Parcours clairs et appels à l'action pour transformer vos visiteurs en clients.</p></article>
-          <article class="box reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2.5"/><path d="M11 18h2"/></svg></div><h3>Parfait sur mobile</h3><p>Une expérience fluide sur smartphone, tablette et ordinateur.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="block alt">
-      <div class="container">
-        <div class="head center reveal">
-          <span class="eyebrow"><i></i> Notre méthode</span>
-          <h2>Comment <span class="grad">ça se passe</span></h2>
-        </div>
-        <div class="timeline" id="timeline">
-          <div class="track"><div class="fill" id="fill"></div></div>
-          <div class="step"><div class="dot">01</div><h3>Échange & diagnostic</h3><p>Nous analysons vos besoins, vos processus et vos objectifs, gratuitement et sans engagement.</p></div>
-          <div class="step"><div class="dot">02</div><h3>Proposition & devis</h3><p>Une solution claire, un planning et un devis détaillé, priorisés selon le retour sur investissement.</p></div>
-          <div class="step"><div class="dot">03</div><h3>Conception & développement</h3><p>Nous construisons la solution avec des démonstrations régulières pour valider chaque étape.</p></div>
-          <div class="step"><div class="dot">04</div><h3>Mise en ligne & suivi</h3><p>Déploiement, formation de vos équipes, maintenance et amélioration continue.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="block">
-      <div class="container">
-        <div class="head center reveal">
-          <span class="eyebrow"><i></i> FAQ</span>
-          <h2>Questions <span class="grad">fréquentes</span></h2>
-        </div>
-        <div class="faq">
-          <details class="reveal"><summary>Combien coûte un site web ?</summary><p>Le prix dépend du type de site (vitrine, e-commerce, plateforme), du nombre de pages et des fonctionnalités. Nous vous remettons un devis détaillé après un premier échange.</p></details>
-          <details class="reveal"><summary>Combien de temps pour créer une application mobile ?</summary><p>Le délai dépend des fonctionnalités. Nous définissons ensemble une première version ciblée pour lancer rapidement, puis nous la faisons évoluer.</p></details>
-          <details class="reveal"><summary>Pourrai-je modifier mon site moi-même ?</summary><p>Oui, si vous le souhaitez : nous pouvons prévoir une interface simple pour modifier vos textes, images et produits.</p></details>
-          <details class="reveal"><summary>Assurez-vous l'hébergement et la maintenance ?</summary><p>Nous pouvons vous accompagner sur la mise en ligne, l'hébergement et la maintenance pour que votre site reste rapide et sécurisé.</p></details>
-        </div>
-      </div>
-    </section>
-
-    <section class="cta">
-      <div class="container">
-        <div class="cta-box reveal">
-          <div class="rings" aria-hidden="true"><i></i><i></i><i></i></div>
-          <div class="inner">
-            <h2>Vous avez un projet de site <br/>ou d'application ?</h2>
-            <p>Parlez-nous de votre idée : nous vous aidons à la cadrer et vous remettons un devis clair.</p>
-            <div class="btns">
-              <a href="index.html#contact" class="btn btn-white magnetic">Demander un devis <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-              <a href="tel:+33785138224" class="btn btn-outline-white magnetic">Appeler le +33 7 85 13 82 24</a>
+        <div class="ed-meta fade-up"><a href="index.html">Accueil</a><span>/</span><span>Développement d'applications & sites web</span></div>
+        <h1 class="ed-h1">
+          <span class="line"><span>Des sites et des apps</span></span>
+          <span class="line"><span>pensés pour <em>vendre.</em></span></span>
+          <span class="line"><span>Pas seulement pour plaire.</span></span>
+        </h1>
+        <div class="ed-hero-grid">
+          <div class="ed-hero-img reveal-img"><img data-parallax="0.06" src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1200&q=80" alt="Développeurs travaillant sur une application" /></div>
+          <div class="ed-hero-side fade-up d2">
+            <p class="ed-lead">Sites vitrines, boutiques en ligne, applications mobiles et plateformes : nous concevons des outils rapides, bien référencés et faciles à faire évoluer.</p>
+            <div class="ed-cta">
+              <a href="index.html#contact" class="ed-btn">Demander un devis <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <a href="tel:+33785138224" class="ed-link">ou appeler le 07 85 13 82 24</a>
             </div>
+            <dl class="ed-facts"><div><dt>6</dt><dd>types de projets</dd></div><div><dt>iOS</dt><dd>& Android</dd></div><div><dt>100%</dt><dd>sur mesure</dd></div></dl>
           </div>
         </div>
       </div>
     </section>
 
+    <section class="ed-sec">
+      <div class="container">
+        <div class="ed-head">
+          <p class="ed-kicker reveal">(01) — Nos offres</p>
+          <h2 class="ed-h2 reveal">Ce que nous <em>construisons</em> pour vous.</h2>
+        </div>
+        <ol class="idx">
+          <li class="idx-row reveal" data-img="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80">
+            <span class="idx-n">01</span>
+            <h3 class="idx-t">Site vitrine</h3>
+            <p class="idx-d">Un site professionnel qui présente votre activité et génère des demandes de contact.</p>
+            <span class="idx-tags"><span>Design sur mesure</span><span>SEO</span><span>Formulaire de devis</span></span>
+            <span class="idx-go" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </li>
+          <li class="idx-row reveal" data-img="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1200&q=80">
+            <span class="idx-n">02</span>
+            <h3 class="idx-t">Site e-commerce</h3>
+            <p class="idx-d">Une boutique en ligne pour vendre vos produits simplement et en toute sécurité.</p>
+            <span class="idx-tags"><span>Paiement sécurisé</span><span>Catalogue</span><span>Commandes</span></span>
+            <span class="idx-go" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </li>
+          <li class="idx-row reveal" data-img="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1000&q=80">
+            <span class="idx-n">03</span>
+            <h3 class="idx-t">Application mobile</h3>
+            <p class="idx-d">Une application iOS et Android pour vos clients ou vos équipes, jusqu'à la publication sur les stores.</p>
+            <span class="idx-tags"><span>UX/UI</span><span>iOS & Android</span><span>Publication</span></span>
+            <span class="idx-go" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </li>
+          <li class="idx-row reveal" data-img="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80">
+            <span class="idx-n">04</span>
+            <h3 class="idx-t">Application web & plateforme</h3>
+            <p class="idx-d">Outils métiers, espaces clients, plateformes de mise en relation et d'abonnement.</p>
+            <span class="idx-tags"><span>Abonnements</span><span>Tableaux de bord</span><span>Utilisateurs</span></span>
+            <span class="idx-go" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </li>
+          <li class="idx-row reveal" data-img="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1400&q=80">
+            <span class="idx-n">05</span>
+            <h3 class="idx-t">Site avec agent IA intégré</h3>
+            <p class="idx-d">Un site qui répond à vos visiteurs, qualifie vos prospects et prend des rendez-vous.</p>
+            <span class="idx-tags"><span>Chatbot</span><span>Rendez-vous</span><span>Leads</span></span>
+            <span class="idx-go" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </li>
+          <li class="idx-row reveal" data-img="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1200&q=80">
+            <span class="idx-n">06</span>
+            <h3 class="idx-t">Maintenance & évolutions</h3>
+            <p class="idx-d">Votre site ou application reste rapide, sécurisé et à jour, avec de nouvelles fonctionnalités au fil du temps.</p>
+            <span class="idx-tags"><span>Mises à jour</span><span>Sécurité</span><span>Performances</span></span>
+            <span class="idx-go" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </li>
+        </ol>
+      </div>
+      <div class="idx-preview" aria-hidden="true"><img alt="" /></div>
+    </section>
+
+    <section class="ed-sec ed-paper">
+      <div class="container">
+        <div class="ed-head">
+          <p class="ed-kicker reveal">(02) — Pour qui</p>
+          <h2 class="ed-h2 reveal">Un projet adapté à <em>votre activité.</em></h2>
+        </div>
+        <div class="uc">
+          <div class="uc-tabs reveal"><button type="button" class="uc-tab on" data-k="0"><span>01</span>Commerces & artisans</button><button type="button" class="uc-tab" data-k="1"><span>02</span>Cabinets & indépendants</button><button type="button" class="uc-tab" data-k="2"><span>03</span>Startups</button><button type="button" class="uc-tab" data-k="3"><span>04</span>PME & réseaux</button></div>
+          <div class="uc-panes reveal">
+            <article class="uc-pane on" data-k="0">
+              <div class="uc-img"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1200&q=80" alt="Commerces & artisans" loading="lazy" /></div>
+              <div class="uc-txt">
+                <h3>Commerces & artisans</h3>
+                <p>Un site clair qui donne envie de vous contacter, visible sur Google dans votre zone, avec vos horaires, vos réalisations et un formulaire de devis.</p>
+                <ul><li>Référencement local</li><li>Galerie de réalisations</li><li>Demande de devis</li></ul>
+              </div>
+            </article>
+            <article class="uc-pane" data-k="1">
+              <div class="uc-img"><img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=80" alt="Cabinets & indépendants" loading="lazy" /></div>
+              <div class="uc-txt">
+                <h3>Cabinets & indépendants</h3>
+                <p>Un site professionnel qui inspire confiance et permet de prendre rendez-vous en ligne, sans échanges inutiles.</p>
+                <ul><li>Image professionnelle</li><li>Prise de rendez-vous</li><li>Pages expertises</li></ul>
+              </div>
+            </article>
+            <article class="uc-pane" data-k="2">
+              <div class="uc-img"><img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1200&q=80" alt="Startups" loading="lazy" /></div>
+              <div class="uc-txt">
+                <h3>Startups</h3>
+                <p>Une première version de votre application, rapide à lancer, pour tester votre marché puis la faire évoluer avec vos utilisateurs.</p>
+                <ul><li>Version 1 rapide</li><li>Tableau de bord</li><li>Évolutive</li></ul>
+              </div>
+            </article>
+            <article class="uc-pane" data-k="3">
+              <div class="uc-img"><img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1200&q=80" alt="PME & réseaux" loading="lazy" /></div>
+              <div class="uc-txt">
+                <h3>PME & réseaux</h3>
+                <p>Des outils web sur mesure pour vos équipes, vos clients ou vos partenaires : espaces clients, catalogues, outils internes.</p>
+                <ul><li>Espace client</li><li>Outils internes</li><li>Connexion à vos logiciels</li></ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ed-sec">
+      <div class="container">
+        <div class="ed-head">
+          <p class="ed-kicker reveal">(03) — Exemple de projet</p>
+          <h2 class="ed-h2 reveal">Un site qui existe, mais qui <em>ne rapporte rien.</em></h2>
+        </div>
+        <div class="ba reveal">
+          <div class="ba-col">
+            <p class="ba-label">Avant</p>
+            <ul><li>Le site est lent et difficile à lire sur téléphone.</li><li>Il n'apparaît pas sur Google quand on cherche le métier et la ville.</li><li>Les visiteurs repartent sans laisser leurs coordonnées.</li></ul>
+          </div>
+          <div class="ba-arrow" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+          <div class="ba-col ba-after">
+            <p class="ba-label">Avec Alystra</p>
+            <ul><li>Un site rapide et lisible sur mobile, avec un message clair dès l'arrivée.</li><li>Des pages pensées pour les recherches de vos futurs clients.</li><li>Un formulaire de devis visible, et des demandes qui arrivent directement.</li></ul>
+          </div>
+        </div>
+        <p class="ed-note reveal">Scénario illustratif : chaque projet est adapté à votre activité et à vos objectifs.</p>
+      </div>
+    </section>
+
+    <section class="ed-sec ed-paper">
+      <div class="container">
+        <div class="ed-head">
+          <p class="ed-kicker reveal">(04) — Méthode</p>
+          <h2 class="ed-h2 reveal">Quatre étapes, <em>aucune surprise.</em></h2>
+        </div>
+        <ol class="ed-steps">
+          <li class="reveal"><span>01</span><h3>Échange & cadrage</h3><p>Vos objectifs, vos clients, vos contenus : nous définissons ensemble le bon périmètre.</p></li>
+          <li class="reveal"><span>02</span><h3>Maquettes & devis</h3><p>Vous voyez le design avant le développement, avec un devis et un planning clairs.</p></li>
+          <li class="reveal"><span>03</span><h3>Développement</h3><p>Nous construisons le site ou l'application avec des points d'étape réguliers.</p></li>
+          <li class="reveal"><span>04</span><h3>Mise en ligne & suivi</h3><p>Publication, vérifications, prise en main, puis maintenance et évolutions.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="ed-sec">
+      <div class="container ed-faq">
+        <div>
+          <p class="ed-kicker reveal">(05) — Questions</p>
+          <h2 class="ed-h2 reveal">Ce que l'on nous <em>demande</em> souvent.</h2>
+        </div>
+        <div class="ed-qs">
+          <details class="ed-q reveal"><summary><span>Combien coûte un site web ?</span><i aria-hidden="true"></i></summary><p>Le prix dépend du type de site (vitrine, e-commerce, plateforme), du nombre de pages et des fonctionnalités. Nous vous remettons un devis détaillé après un premier échange.</p></details>
+          <details class="ed-q reveal"><summary><span>Combien de temps pour créer une application mobile ?</span><i aria-hidden="true"></i></summary><p>Le délai dépend des fonctionnalités. Nous définissons ensemble une première version ciblée pour lancer rapidement, puis nous la faisons évoluer.</p></details>
+          <details class="ed-q reveal"><summary><span>Pourrai-je modifier mon site moi-même ?</span><i aria-hidden="true"></i></summary><p>Oui, si vous le souhaitez : nous pouvons prévoir une interface simple pour modifier vos textes, images et produits.</p></details>
+          <details class="ed-q reveal"><summary><span>Assurez-vous l'hébergement et la maintenance ?</span><i aria-hidden="true"></i></summary><p>Nous pouvons vous accompagner sur la mise en ligne, l'hébergement et la maintenance pour que votre site reste rapide et sécurisé.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="ed-end">
+      <div class="container">
+        <p class="ed-kicker light reveal">Parlons de votre projet</p>
+        <h2 class="ed-end-h reveal">Quel site ou quelle application voulez-vous <em>lancer</em>&nbsp;?</h2>
+        <div class="ed-end-cta reveal">
+          <a href="index.html#contact" class="ed-btn light">Demander un devis <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a href="mailto:contact@alystra.tech" class="ed-link light">contact@alystra.tech</a>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer>
@@ -224,6 +312,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=5"></script>
+  <script src="script.js?v=6"></script>
 </body>
 </html>
