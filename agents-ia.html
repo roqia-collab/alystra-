@@ -10,14 +10,14 @@
   <meta property="og:description" content="Alystra crée des agents IA, chatbots et automatisations sur mesure pour les entreprises : support client, prospection, documents, finance. Audit IA et devis personnalisé." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://alystra.tech/agents-ia.html" />
-  <meta property="og:image" content="https://alystra.tech/assets/logo-original.png" />
+  <meta property="og:image" content="https://alystra.tech/assets/og-image.jpg" />
   <meta property="og:locale" content="fr_FR" />
   <meta name="theme-color" content="#4f46e5" />
   <link rel="icon" type="image/svg+xml" href="assets/logo-mark.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=2" />
+  <link rel="stylesheet" href="styles.css?v=4" />
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://alystra.tech/"}, {"@type": "ListItem", "position": 2, "name": "Agents IA & automatisation", "item": "https://alystra.tech/agents-ia.html"}]}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "Agents IA & automatisation", "description": "Alystra crée des agents IA, chatbots et automatisations sur mesure pour les entreprises : support client, prospection, documents, finance. Audit IA et devis personnalisé.", "provider": {"@type": "Organization", "name": "Alystra", "url": "https://alystra.tech"}, "areaServed": "FR"}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Combien coûte un agent IA ?", "acceptedAnswer": {"@type": "Answer", "text": "Le coût dépend du périmètre (nombre de tâches, outils à connecter, volume d'échanges). Après un premier échange, nous vous remettons un devis détaillé et adapté."}}, {"@type": "Question", "name": "L'agent IA peut-il se connecter à mes outils actuels ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. Nos agents peuvent être connectés à votre site, votre messagerie, votre CRM, votre agenda ou vos logiciels métiers selon leurs possibilités d'intégration."}}, {"@type": "Question", "name": "Faut-il des compétences techniques pour l'utiliser ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. Nous livrons une solution prête à l'emploi, nous formons vos équipes et nous assurons le suivi."}}, {"@type": "Question", "name": "Que se passe-t-il si l'agent ne sait pas répondre ?", "acceptedAnswer": {"@type": "Answer", "text": "L'agent est configuré pour transmettre la demande à un membre de votre équipe lorsqu'une question sort de son périmètre."}}]}</script>
@@ -25,11 +25,14 @@
 <body>
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
     <defs>
-      <linearGradient id="goldGrad" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#a8823e"/><stop offset=".55" stop-color="#d6b26a"/><stop offset="1" stop-color="#e9cf95"/></linearGradient>
-      <symbol id="mark" viewBox="0 0 200 200">
-        <path d="M97 14 L106 14 L52 182 L36 182 Z" fill="currentColor"/>
-        <path d="M95 14 L112 14 L174 182 L142 182 Z" fill="currentColor"/>
-        <path d="M34 168 Q 92 108 192 92 Q 112 114 34 168 Z" fill="url(#goldGrad)"/>
+      <linearGradient id="brandGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2563eb"/><stop offset=".55" stop-color="#4f46e5"/><stop offset="1" stop-color="#9333ea"/></linearGradient>
+      <radialGradient id="brandShine" cx=".25" cy=".15" r=".9"><stop offset="0" stop-color="#fff" stop-opacity=".35"/><stop offset=".6" stop-color="#fff" stop-opacity="0"/></radialGradient>
+      <symbol id="mark" viewBox="0 0 64 64">
+        <rect width="64" height="64" rx="18" fill="url(#brandGrad)"/>
+        <rect width="64" height="64" rx="18" fill="url(#brandShine)"/>
+        <path d="M19.5 47 L32 16 L44.5 47" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M13 41.5 Q 31 28.5 50 25.5" fill="none" stroke="#fff" stroke-opacity=".9" stroke-width="3.2" stroke-linecap="round"/>
+        <circle cx="51.5" cy="25.2" r="3.3" fill="#fff"/>
       </symbol>
     </defs>
   </svg>
@@ -41,7 +44,7 @@
       <div class="header-inner">
         <a href="index.html" class="brand" aria-label="Alystra — accueil">
           <svg><use href="#mark"/></svg>
-          <span class="wordmark">ΛLYSTRΛ</span>
+          <span class="wordmark">ALYSTRA</span>
         </a>
         <nav class="nav" aria-label="Navigation principale">
           <div class="dd">
@@ -100,17 +103,70 @@
           <h2>Les <span class="grad">10 services IA</span> que nous proposons</h2>
           <p>Chaque service peut être réalisé seul ou combiné aux autres, selon vos priorités.</p>
         </div>
-        <div class="ai-grid">
-          <article class="ai-card reveal"><span class="n">01</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div><h3>Audit & stratégie IA</h3><p>Identifier les processus automatisables, évaluer les économies possibles et construire votre feuille de route IA.</p></article>
-          <article class="ai-card reveal"><span class="n">02</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="6" height="6" rx="1.5"/><rect x="15" y="15" width="6" height="6" rx="1.5"/><path d="M9 6h4a2 2 0 012 2v7"/></svg></div><h3>Automatisation des processus</h3><p>Automatiser la saisie, les relances, les contrôles, la circulation des documents et les tâches administratives.</p></article>
-          <article class="ai-card reveal"><span class="n">03</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="7" width="16" height="12" rx="3"/><path d="M12 3v4M9 12h.01M15 12h.01M9 16h6"/></svg></div><h3>Agents IA métiers</h3><p>Des assistants capables d'exécuter des tâches dans vos CRM, ERP ou logiciels métiers, sous supervision.</p></article>
-          <article class="ai-card reveal"><span class="n">04</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div><h3>Chatbots intelligents</h3><p>Répondre à vos clients, qualifier vos prospects et interroger vos documents internes, 24h/24.</p></article>
-          <article class="ai-card reveal"><span class="n">05</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 6-6"/></svg></div><h3>Data analytics & IA</h3><p>Détecter les anomalies, prévoir les ventes, analyser les marges et améliorer vos décisions.</p></article>
-          <article class="ai-card reveal"><span class="n">06</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></div><h3>IA commerciale & CRM</h3><p>Qualifier les leads, préparer la prospection, enrichir le CRM et automatiser les suivis.</p></article>
-          <article class="ai-card reveal"><span class="n">07</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg></div><h3>IA documentaire</h3><p>Extraire automatiquement les données des factures, contrats, bons de commande et comptes rendus.</p></article>
-          <article class="ai-card reveal"><span class="n">08</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>IA finance & risques</h3><p>Automatiser les rapprochements, les contrôles, le reporting et l'analyse des écarts.</p></article>
-          <article class="ai-card reveal"><span class="n">09</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg></div><h3>Formation des équipes</h3><p>Former vos collaborateurs à l'IA générative et aux outils pour un usage efficace et sécurisé.</p></article>
-          <article class="ai-card reveal"><span class="n">10</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2v6M15 2v6M6 8h12v4a6 6 0 01-12 0zM12 18v4"/></svg></div><h3>Intégration & maintenance</h3><p>Connecter l'IA à vos outils existants, la sécuriser et la faire évoluer dans la durée.</p></article>
+        <div class="ai-wrap">
+          <div class="ais reveal" id="ais">
+            <div class="ais-bg" aria-hidden="true"><i></i><i></i></div>
+            <ol class="ais-list">
+            <li class="ais-item active" data-ic="search">
+              <button type="button" class="ais-tab" aria-expanded="true"><span class="n">01</span><span class="t">Audit & stratégie IA</span><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span></button>
+              <div class="ais-detail"><div><p>Identifier les processus automatisables, évaluer les économies possibles et construire votre feuille de route IA.</p><div class="chips"><span>Cartographie des processus</span><span>Estimation des gains</span><span>Feuille de route</span></div></div></div>
+            </li>
+            <li class="ais-item" data-ic="flow">
+              <button type="button" class="ais-tab" aria-expanded="false"><span class="n">02</span><span class="t">Automatisation des processus</span><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="6" height="6" rx="1.5"/><rect x="15" y="15" width="6" height="6" rx="1.5"/><path d="M9 6h4a2 2 0 012 2v7"/></svg></span></button>
+              <div class="ais-detail"><div><p>Automatiser la saisie, les relances, les contrôles, la circulation des documents et les tâches administratives.</p><div class="chips"><span>Saisie automatique</span><span>Relances</span><span>Workflows</span></div></div></div>
+            </li>
+            <li class="ais-item" data-ic="bot">
+              <button type="button" class="ais-tab" aria-expanded="false"><span class="n">03</span><span class="t">Agents IA métiers</span><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="7" width="16" height="12" rx="3"/><path d="M12 3v4M9 12h.01M15 12h.01M9 16h6"/></svg></span></button>
+              <div class="ais-detail"><div><p>Des assistants capables d'exécuter des tâches dans vos CRM, ERP ou logiciels métiers, sous supervision.</p><div class="chips"><span>CRM & ERP</span><span>Logiciels métiers</span><span>Supervision humaine</span></div></div></div>
+            </li>
+            <li class="ais-item" data-ic="chat">
+              <button type="button" class="ais-tab" aria-expanded="false"><span class="n">04</span><span class="t">Chatbots intelligents</span><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></span></button>
+              <div class="ais-detail"><div><p>Répondre à vos clients, qualifier vos prospects et interroger vos documents internes, 24h/24.</p><div class="chips"><span>Site web</span><span>WhatsApp & e-mail</span><span>Base documentaire</span></div></div></div>
+            </li>
+            <li class="ais-item" data-ic="chart">
+              <button type="button" class="ais-tab" aria-expanded="false"><span class="n">05</span><span class="t">Data analytics & IA</span><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 6-6"/></svg></span></button>
+              <div class="ais-detail"><div><p>Détecter les anomalies, prévoir les ventes, analyser les marges et améliorer vos décisions.</p><div class="chips"><span>Prévisions</span><span>Anomalies</span><span>Tableaux de bord</span></div></div></div>
+            </li>
+            <li class="ais-item" data-ic="target">
+              <button type="button" class="ais-tab" aria-expanded="false"><span class="n">06</span><span class="t">IA commerciale & CRM</span><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></span></button>
+              <div class="ais-detail"><div><p>Qualifier les leads, préparer la prospection, enrichir le CRM et automatiser les suivis.</p><div class="chips"><span>Scoring des leads</span><span>Prospection</span><span>Suivi CRM</span></div></div></div>
+            </li>
+            <li class="ais-item" data-ic="doc">
+              <button type="button" class="ais-tab" aria-expanded="false"><span class="n">07</span><span class="t">IA documentaire</span><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg></span></button>
+              <div class="ais-detail"><div><p>Extraire automatiquement les données des factures, contrats, bons de commande et comptes rendus.</p><div class="chips"><span>Factures</span><span>Contrats</span><span>Comptes rendus</span></div></div></div>
+            </li>
+            <li class="ais-item" data-ic="shield">
+              <button type="button" class="ais-tab" aria-expanded="false"><span class="n">08</span><span class="t">IA finance & risques</span><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg></span></button>
+              <div class="ais-detail"><div><p>Automatiser les rapprochements, les contrôles, le reporting et l'analyse des écarts.</p><div class="chips"><span>Rapprochements</span><span>Contrôles</span><span>Reporting</span></div></div></div>
+            </li>
+            <li class="ais-item" data-ic="school">
+              <button type="button" class="ais-tab" aria-expanded="false"><span class="n">09</span><span class="t">Formation des équipes</span><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg></span></button>
+              <div class="ais-detail"><div><p>Former vos collaborateurs à l'IA générative et aux outils pour un usage efficace et sécurisé.</p><div class="chips"><span>Ateliers pratiques</span><span>Bonnes pratiques</span><span>Sécurité</span></div></div></div>
+            </li>
+            <li class="ais-item" data-ic="plug">
+              <button type="button" class="ais-tab" aria-expanded="false"><span class="n">10</span><span class="t">Intégration & maintenance</span><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2v6M15 2v6M6 8h12v4a6 6 0 01-12 0zM12 18v4"/></svg></span></button>
+              <div class="ais-detail"><div><p>Connecter l'IA à vos outils existants, la sécuriser et la faire évoluer dans la durée.</p><div class="chips"><span>Connexion à vos outils</span><span>Sécurité</span><span>Évolutions</span></div></div></div>
+            </li>
+            </ol>
+            <div class="ais-panel" aria-live="polite">
+              <div class="ais-num" aria-hidden="true">01</div>
+              <div class="ais-icon" aria-hidden="true"><span class="orb o1"></span><span class="orb o2"></span><div class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div></div>
+              <div class="ais-content">
+                <span class="ais-count">Service <b>01</b> / 10</span>
+                <h3>Audit & stratégie IA</h3>
+                <p>Identifier les processus automatisables, évaluer les économies possibles et construire votre feuille de route IA.</p>
+                <div class="chips"><span>Cartographie des processus</span><span>Estimation des gains</span><span>Feuille de route</span></div>
+              </div>
+              <div class="ais-foot">
+                <a href="index.html#contact" class="btn btn-white">Parler de ce service <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                <div class="ais-arrows">
+                  <button type="button" class="ais-prev" aria-label="Service précédent"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M11 18l-6-6 6-6"/></svg></button>
+                  <button type="button" class="ais-next" aria-label="Service suivant"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+                </div>
+              </div>
+              <div class="ais-progress"><i></i></div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -202,7 +258,7 @@
         <div>
           <a href="index.html" class="brand" style="margin-bottom:18px">
             <svg><use href="#mark"/></svg>
-            <span class="wordmark">ΛLYSTRΛ</span>
+            <span class="wordmark">ALYSTRA</span>
           </a>
           <p>Agence IA et développement à Paris : agents IA, automatisation, applications et sites web, conseil en stratégie.</p>
         </div>
@@ -241,6 +297,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=2"></script>
+  <script src="script.js?v=4"></script>
 </body>
 </html>

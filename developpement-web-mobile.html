@@ -10,14 +10,14 @@
   <meta property="og:description" content="Création de sites vitrines et e-commerce, développement d'applications mobiles iOS/Android et d'applications web sur mesure. Agence basée à Paris. Devis personnalisé." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://alystra.tech/developpement-web-mobile.html" />
-  <meta property="og:image" content="https://alystra.tech/assets/logo-original.png" />
+  <meta property="og:image" content="https://alystra.tech/assets/og-image.jpg" />
   <meta property="og:locale" content="fr_FR" />
   <meta name="theme-color" content="#4f46e5" />
   <link rel="icon" type="image/svg+xml" href="assets/logo-mark.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=2" />
+  <link rel="stylesheet" href="styles.css?v=4" />
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://alystra.tech/"}, {"@type": "ListItem", "position": 2, "name": "Développement d'applications & sites web", "item": "https://alystra.tech/developpement-web-mobile.html"}]}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "Développement d'applications & sites web", "description": "Création de sites vitrines et e-commerce, développement d'applications mobiles iOS/Android et d'applications web sur mesure. Agence basée à Paris. Devis personnalisé.", "provider": {"@type": "Organization", "name": "Alystra", "url": "https://alystra.tech"}, "areaServed": "FR"}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Combien coûte un site web ?", "acceptedAnswer": {"@type": "Answer", "text": "Le prix dépend du type de site (vitrine, e-commerce, plateforme), du nombre de pages et des fonctionnalités. Nous vous remettons un devis détaillé après un premier échange."}}, {"@type": "Question", "name": "Combien de temps pour créer une application mobile ?", "acceptedAnswer": {"@type": "Answer", "text": "Le délai dépend des fonctionnalités. Nous définissons ensemble une première version ciblée pour lancer rapidement, puis nous la faisons évoluer."}}, {"@type": "Question", "name": "Pourrai-je modifier mon site moi-même ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, si vous le souhaitez : nous pouvons prévoir une interface simple pour modifier vos textes, images et produits."}}, {"@type": "Question", "name": "Assurez-vous l'hébergement et la maintenance ?", "acceptedAnswer": {"@type": "Answer", "text": "Nous pouvons vous accompagner sur la mise en ligne, l'hébergement et la maintenance pour que votre site reste rapide et sécurisé."}}]}</script>
@@ -25,11 +25,14 @@
 <body>
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
     <defs>
-      <linearGradient id="goldGrad" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#a8823e"/><stop offset=".55" stop-color="#d6b26a"/><stop offset="1" stop-color="#e9cf95"/></linearGradient>
-      <symbol id="mark" viewBox="0 0 200 200">
-        <path d="M97 14 L106 14 L52 182 L36 182 Z" fill="currentColor"/>
-        <path d="M95 14 L112 14 L174 182 L142 182 Z" fill="currentColor"/>
-        <path d="M34 168 Q 92 108 192 92 Q 112 114 34 168 Z" fill="url(#goldGrad)"/>
+      <linearGradient id="brandGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2563eb"/><stop offset=".55" stop-color="#4f46e5"/><stop offset="1" stop-color="#9333ea"/></linearGradient>
+      <radialGradient id="brandShine" cx=".25" cy=".15" r=".9"><stop offset="0" stop-color="#fff" stop-opacity=".35"/><stop offset=".6" stop-color="#fff" stop-opacity="0"/></radialGradient>
+      <symbol id="mark" viewBox="0 0 64 64">
+        <rect width="64" height="64" rx="18" fill="url(#brandGrad)"/>
+        <rect width="64" height="64" rx="18" fill="url(#brandShine)"/>
+        <path d="M19.5 47 L32 16 L44.5 47" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M13 41.5 Q 31 28.5 50 25.5" fill="none" stroke="#fff" stroke-opacity=".9" stroke-width="3.2" stroke-linecap="round"/>
+        <circle cx="51.5" cy="25.2" r="3.3" fill="#fff"/>
       </symbol>
     </defs>
   </svg>
@@ -41,7 +44,7 @@
       <div class="header-inner">
         <a href="index.html" class="brand" aria-label="Alystra — accueil">
           <svg><use href="#mark"/></svg>
-          <span class="wordmark">ΛLYSTRΛ</span>
+          <span class="wordmark">ALYSTRA</span>
         </a>
         <nav class="nav" aria-label="Navigation principale">
           <div class="dd">
@@ -182,7 +185,7 @@
         <div>
           <a href="index.html" class="brand" style="margin-bottom:18px">
             <svg><use href="#mark"/></svg>
-            <span class="wordmark">ΛLYSTRΛ</span>
+            <span class="wordmark">ALYSTRA</span>
           </a>
           <p>Agence IA et développement à Paris : agents IA, automatisation, applications et sites web, conseil en stratégie.</p>
         </div>
@@ -221,6 +224,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=2"></script>
+  <script src="script.js?v=4"></script>
 </body>
 </html>

@@ -233,6 +233,74 @@ if (chat) {
   }
 }
 
+/* ---------- Vitrine des 10 services IA ---------- */
+const ais = $('#ais');
+if (ais) {
+  const items = $$('.ais-item', ais);
+  const panel = $('.ais-panel', ais);
+  const num = $('.ais-num', ais), tile = $('.ais-icon .tile', ais);
+  const count = $('.ais-count b', ais), title = $('.ais-content h3', ais);
+  const text = $('.ais-content p', ais), chips = $('.ais-content .chips', ais);
+  const bar = $('.ais-progress i', ais);
+  const desktop = () => innerWidth > 1080;
+  let cur = 0, timer = null, swapT = null;
+
+  const restartBar = () => {
+    if (!bar) return;
+    bar.classList.remove('run'); void bar.offsetWidth;
+    if (desktop() && !reduce) bar.classList.add('run');
+  };
+  const show = (i, user) => {
+    const prev = cur;
+    cur = (i + items.length) % items.length;
+    items.forEach((it, k) => {
+      it.classList.toggle('active', k === cur);
+      $('.ais-tab', it).setAttribute('aria-expanded', String(k === cur));
+    });
+    if (panel && prev !== cur) {
+      const it = items[cur];
+      panel.classList.add('swap');
+      clearTimeout(swapT);
+      swapT = setTimeout(() => {
+        const n = String(cur + 1).padStart(2, '0');
+        num.textContent = n; count.textContent = n;
+        title.textContent = $('.t', it).textContent;
+        text.textContent = $('.ais-detail p', it).textContent;
+        chips.innerHTML = $('.ais-detail .chips', it).innerHTML;
+        tile.innerHTML = $('.ais-tab .ic', it).innerHTML;
+        panel.classList.remove('swap');
+      }, reduce ? 0 : 280);
+    }
+    if (user) stop();
+    restartBar();
+  };
+  const stop = () => { clearInterval(timer); timer = null; };
+  const start = () => {
+    stop();
+    if (!desktop() || reduce) return;
+    restartBar();
+    timer = setInterval(() => { if (!ais.matches(':hover')) show(cur + 1); }, 6000);
+  };
+
+  items.forEach((it, k) => $('.ais-tab', it).addEventListener('click', () => {
+    if (!desktop() && k === cur && it.classList.contains('active')) { it.classList.remove('active'); $('.ais-tab', it).setAttribute('aria-expanded', 'false'); cur = -1; return; }
+    show(k, true);
+  }));
+  $('.ais-prev', ais)?.addEventListener('click', () => show(cur - 1, true));
+  $('.ais-next', ais)?.addEventListener('click', () => show(cur + 1, true));
+
+  // démarre la rotation quand la vitrine est visible
+  const visCheck = () => {
+    const r = ais.getBoundingClientRect();
+    const vis = r.top < innerHeight * .8 && r.bottom > innerHeight * .2;
+    if (vis && !timer && desktop()) start();
+    if (!vis && timer) { stop(); bar?.classList.remove('run'); }
+  };
+  addEventListener('scroll', visCheck, { passive: true });
+  addEventListener('resize', visCheck);
+  visCheck();
+}
+
 /* ---------- Formulaire de devis ---------- */
 const form = $('#contactForm');
 if (form) {
