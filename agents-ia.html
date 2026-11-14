@@ -17,12 +17,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=4" />
+  <link rel="stylesheet" href="styles.css?v=5" />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="editorial.css?v=1" />
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://alystra.tech/"}, {"@type": "ListItem", "position": 2, "name": "Agents IA & automatisation", "item": "https://alystra.tech/agents-ia.html"}]}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "Agents IA & automatisation", "description": "Alystra crée des agents IA, chatbots et automatisations sur mesure pour les entreprises : support client, prospection, documents, finance. Audit IA et devis personnalisé.", "provider": {"@type": "Organization", "name": "Alystra", "url": "https://alystra.tech"}, "areaServed": "FR"}</script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Combien coûte un agent IA ?", "acceptedAnswer": {"@type": "Answer", "text": "Le coût dépend du périmètre (nombre de tâches, outils à connecter, volume d'échanges). Après un premier échange, nous vous remettons un devis détaillé et adapté."}}, {"@type": "Question", "name": "L'agent IA peut-il se connecter à mes outils actuels ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. Nos agents peuvent être connectés à votre site, votre messagerie, votre CRM, votre agenda ou vos logiciels métiers selon leurs possibilités d'intégration."}}, {"@type": "Question", "name": "Faut-il des compétences techniques pour l'utiliser ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. Nous livrons une solution prête à l'emploi, nous formons vos équipes et nous assurons le suivi."}}, {"@type": "Question", "name": "Que se passe-t-il si l'agent ne sait pas répondre ?", "acceptedAnswer": {"@type": "Answer", "text": "L'agent est configuré pour transmettre la demande à un membre de votre équipe lorsqu'une question sort de son périmètre."}}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Combien coûte un agent IA ?", "acceptedAnswer": {"@type": "Answer", "text": "Le coût dépend du périmètre (nombre de tâches, outils à connecter, volume d'échanges). Après un premier échange, nous vous remettons un devis détaillé et adapté."}}, {"@type": "Question", "name": "L'agent IA peut-il se connecter à mes outils actuels ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. Nos agents peuvent être connectés à votre site, votre messagerie, votre CRM, votre agenda ou vos logiciels métiers selon leurs possibilités d'intégration."}}, {"@type": "Question", "name": "Faut-il des compétences techniques pour l'utiliser ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. Nous livrons une solution prête à l'emploi, nous formons vos équipes et nous assurons le suivi."}}, {"@type": "Question", "name": "Que se passe-t-il si l'agent ne sait pas répondre ?", "acceptedAnswer": {"@type": "Answer", "text": "L'agent est configuré pour transmettre la demande à un membre de votre équipe lorsqu'une question sort de son périmètre."}}, {"@type": "Question", "name": "Mes données restent-elles confidentielles ?", "acceptedAnswer": {"@type": "Answer", "text": "Nous limitons l'accès de l'agent aux seules données nécessaires et choisissons des outils conformes au RGPD."}}]}</script>
 </head>
-<body>
+<body class="ed-page">
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
     <defs>
       <linearGradient id="brandGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2563eb"/><stop offset=".55" stop-color="#4f46e5"/><stop offset="1" stop-color="#9333ea"/></linearGradient>
@@ -78,177 +80,231 @@
     <div class="m-contact"><a href="tel:+33785138224">+33 7 85 13 82 24</a><a href="mailto:contact@alystra.tech">contact@alystra.tech</a></div>
   </div>
 
-  <main>
-    <section class="page-hero">
-      <canvas id="net" aria-hidden="true"></canvas>
-      <div class="blob b1"></div><div class="blob b2"></div>
-      <div class="container grid">
+  <main class="ed">
+    <section class="ed-hero">
+      <div class="container">
+        <div class="ed-meta fade-up"><a href="index.html">Accueil</a><span>/</span><span>Agents IA & automatisation</span></div>
+        <h1 class="ed-h1">
+          <span class="line"><span>Des agents IA qui font</span></span>
+          <span class="line"><span>le travail <em>répétitif.</em></span></span>
+          <span class="line"><span>Vos équipes, le reste.</span></span>
+        </h1>
+        <div class="ed-hero-grid">
+          <div class="ed-hero-img reveal-img"><img data-parallax="0.06" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1400&q=80" alt="Équipe travaillant avec des outils d'automatisation" /></div>
+          <div class="ed-hero-side fade-up d2">
+            <p class="ed-lead">Nous concevons des assistants intelligents et des automatisations sur mesure, branchés sur vos outils : support client, prospection, documents, finance.</p>
+            <div class="ed-cta">
+              <a href="index.html#contact" class="ed-btn">Demander un devis <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <a href="tel:+33785138224" class="ed-link">ou appeler le 07 85 13 82 24</a>
+            </div>
+            <dl class="ed-facts">
+              <div><dt>10</dt><dd>services IA</dd></div>
+              <div><dt>24/7</dt><dd>disponibilité</dd></div>
+              <div><dt>100%</dt><dd>sur mesure</dd></div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ed-sec" id="services-ia">
+      <div class="container">
+        <div class="ed-head">
+          <p class="ed-kicker reveal">(01) — Nos services</p>
+          <h2 class="ed-h2 reveal">Dix façons concrètes de faire <em>gagner du temps</em> à votre entreprise.</h2>
+        </div>
+        <ol class="idx">
+          <li class="idx-row reveal" data-img="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1200&q=80">
+            <span class="idx-n">01</span>
+            <h3 class="idx-t">Audit & stratégie IA</h3>
+            <p class="idx-d">Identifier les processus automatisables, évaluer les économies possibles et construire votre feuille de route IA.</p>
+            <span class="idx-tags"><span>Cartographie des processus</span><span>Estimation des gains</span><span>Feuille de route</span></span>
+            <span class="idx-go" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </li>
+          <li class="idx-row reveal" data-img="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80">
+            <span class="idx-n">02</span>
+            <h3 class="idx-t">Automatisation des processus</h3>
+            <p class="idx-d">Automatiser la saisie, les relances, les contrôles, la circulation des documents et les tâches administratives.</p>
+            <span class="idx-tags"><span>Saisie automatique</span><span>Relances</span><span>Workflows</span></span>
+            <span class="idx-go" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </li>
+          <li class="idx-row reveal" data-img="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1200&q=80">
+            <span class="idx-n">03</span>
+            <h3 class="idx-t">Agents IA métiers</h3>
+            <p class="idx-d">Des assistants capables d'exécuter des tâches dans vos CRM, ERP ou logiciels métiers, sous supervision.</p>
+            <span class="idx-tags"><span>CRM & ERP</span><span>Logiciels métiers</span><span>Supervision humaine</span></span>
+            <span class="idx-go" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </li>
+          <li class="idx-row reveal" data-img="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1000&q=80">
+            <span class="idx-n">04</span>
+            <h3 class="idx-t">Chatbots intelligents</h3>
+            <p class="idx-d">Répondre à vos clients, qualifier vos prospects et interroger vos documents internes, 24h/24.</p>
+            <span class="idx-tags"><span>Site web</span><span>WhatsApp & e-mail</span><span>Base documentaire</span></span>
+            <span class="idx-go" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </li>
+          <li class="idx-row reveal" data-img="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80">
+            <span class="idx-n">05</span>
+            <h3 class="idx-t">Data analytics & IA</h3>
+            <p class="idx-d">Détecter les anomalies, prévoir les ventes, analyser les marges et améliorer vos décisions.</p>
+            <span class="idx-tags"><span>Prévisions</span><span>Anomalies</span><span>Tableaux de bord</span></span>
+            <span class="idx-go" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </li>
+          <li class="idx-row reveal" data-img="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=80">
+            <span class="idx-n">06</span>
+            <h3 class="idx-t">IA commerciale & CRM</h3>
+            <p class="idx-d">Qualifier les leads, préparer la prospection, enrichir le CRM et automatiser les suivis.</p>
+            <span class="idx-tags"><span>Scoring des leads</span><span>Prospection</span><span>Suivi CRM</span></span>
+            <span class="idx-go" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </li>
+          <li class="idx-row reveal" data-img="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1400&q=80">
+            <span class="idx-n">07</span>
+            <h3 class="idx-t">IA documentaire</h3>
+            <p class="idx-d">Extraire automatiquement les données des factures, contrats, bons de commande et comptes rendus.</p>
+            <span class="idx-tags"><span>Factures</span><span>Contrats</span><span>Comptes rendus</span></span>
+            <span class="idx-go" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </li>
+          <li class="idx-row reveal" data-img="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80">
+            <span class="idx-n">08</span>
+            <h3 class="idx-t">IA finance & risques</h3>
+            <p class="idx-d">Automatiser les rapprochements, les contrôles, le reporting et l'analyse des écarts.</p>
+            <span class="idx-tags"><span>Rapprochements</span><span>Contrôles</span><span>Reporting</span></span>
+            <span class="idx-go" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </li>
+          <li class="idx-row reveal" data-img="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=80">
+            <span class="idx-n">09</span>
+            <h3 class="idx-t">Formation des équipes</h3>
+            <p class="idx-d">Former vos collaborateurs à l'IA générative et aux outils pour un usage efficace et sécurisé.</p>
+            <span class="idx-tags"><span>Ateliers pratiques</span><span>Bonnes pratiques</span><span>Sécurité</span></span>
+            <span class="idx-go" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </li>
+          <li class="idx-row reveal" data-img="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1200&q=80">
+            <span class="idx-n">10</span>
+            <h3 class="idx-t">Intégration & maintenance</h3>
+            <p class="idx-d">Connecter l'IA à vos outils existants, la sécuriser et la faire évoluer dans la durée.</p>
+            <span class="idx-tags"><span>Connexion à vos outils</span><span>Sécurité</span><span>Évolutions</span></span>
+            <span class="idx-go" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </li>
+        </ol>
+      </div>
+      <div class="idx-preview" aria-hidden="true"><img alt="" /></div>
+    </section>
+
+    <section class="ed-sec ed-paper">
+      <div class="container">
+        <div class="ed-head ed-head-split">
+          <p class="ed-kicker reveal">(02) — Cas d'usage</p>
+          <h2 class="ed-h2 reveal">Où un agent IA <em>change vraiment</em> le quotidien.</h2>
+        </div>
+        <div class="uc">
+          <div class="uc-tabs reveal"><button type="button" class="uc-tab on" data-k="0"><span>01</span>Accueil & support client</button><button type="button" class="uc-tab" data-k="1"><span>02</span>Équipe commerciale</button><button type="button" class="uc-tab" data-k="2"><span>03</span>Administratif & finance</button><button type="button" class="uc-tab" data-k="3"><span>04</span>Équipes internes</button></div>
+          <div class="uc-panes reveal">
+            <article class="uc-pane on" data-k="0">
+              <div class="uc-img"><img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1400&q=80" alt="Accueil & support client" loading="lazy" /></div>
+              <div class="uc-txt">
+                <h3>Accueil & support client</h3>
+                <p>Un agent répond aux questions fréquentes sur votre site, WhatsApp ou par e-mail, à toute heure, et transmet à votre équipe les demandes qui sortent de son périmètre.</p>
+                <ul><li>Réponses immédiates</li><li>Transfert à un humain</li><li>Historique des échanges</li></ul>
+              </div>
+            </article>
+            <article class="uc-pane" data-k="1">
+              <div class="uc-img"><img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=80" alt="Équipe commerciale" loading="lazy" /></div>
+              <div class="uc-txt">
+                <h3>Équipe commerciale</h3>
+                <p>L'agent qualifie les prospects, propose des créneaux de rendez-vous et prépare les relances. Vos commerciaux ne parlent qu'aux contacts sérieux.</p>
+                <ul><li>Qualification</li><li>Prise de rendez-vous</li><li>Relances</li></ul>
+              </div>
+            </article>
+            <article class="uc-pane" data-k="2">
+              <div class="uc-img"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80" alt="Administratif & finance" loading="lazy" /></div>
+              <div class="uc-txt">
+                <h3>Administratif & finance</h3>
+                <p>Les factures, bons de commande et contrats sont lus automatiquement : les données utiles sont extraites, contrôlées puis envoyées dans vos outils.</p>
+                <ul><li>Lecture de documents</li><li>Saisie automatique</li><li>Contrôles</li></ul>
+              </div>
+            </article>
+            <article class="uc-pane" data-k="3">
+              <div class="uc-img"><img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1200&q=80" alt="Équipes internes" loading="lazy" /></div>
+              <div class="uc-txt">
+                <h3>Équipes internes</h3>
+                <p>Un assistant qui connaît vos procédures et vos documents répond aux questions de vos collaborateurs, sans qu'ils aient à chercher.</p>
+                <ul><li>Procédures</li><li>Documents internes</li><li>Onboarding</li></ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ed-sec">
+      <div class="container">
+        <div class="ed-head">
+          <p class="ed-kicker reveal">(03) — Exemple de mise en place</p>
+          <h2 class="ed-h2 reveal">Un cabinet qui reçoit une cinquantaine de demandes <em>par semaine.</em></h2>
+        </div>
+        <div class="ba reveal">
+          <div class="ba-col">
+            <p class="ba-label">Avant</p>
+            <ul>
+              <li>Les appels et messages arrivent pendant les rendez-vous.</li>
+              <li>Les rappels se font le soir, quand c'est possible.</li>
+              <li>Une partie des demandes n'obtient jamais de réponse.</li>
+            </ul>
+          </div>
+          <div class="ba-arrow" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+          <div class="ba-col ba-after">
+            <p class="ba-label">Avec un agent Alystra</p>
+            <ul>
+              <li>Chaque demande reçoit une réponse immédiate, jour et nuit.</li>
+              <li>L'agent propose des créneaux et les inscrit dans l'agenda.</li>
+              <li>Les cas particuliers sont transmis à l'équipe avec un résumé.</li>
+            </ul>
+          </div>
+        </div>
+        <p class="ed-note reveal">Scénario illustratif : chaque projet est adapté à votre activité et à vos outils.</p>
+      </div>
+    </section>
+
+    <section class="ed-sec ed-paper">
+      <div class="container">
+        <div class="ed-head">
+          <p class="ed-kicker reveal">(04) — Méthode</p>
+          <h2 class="ed-h2 reveal">Quatre étapes, <em>aucune surprise.</em></h2>
+        </div>
+        <ol class="ed-steps">
+          <li class="reveal"><span>01</span><h3>Échange & diagnostic</h3><p>Nous analysons vos tâches, vos outils et vos priorités. Sans engagement.</p></li>
+          <li class="reveal"><span>02</span><h3>Proposition & devis</h3><p>Le bon périmètre, un planning et un devis détaillé, orientés retour sur investissement.</p></li>
+          <li class="reveal"><span>03</span><h3>Construction</h3><p>Nous construisons l'agent et le testons avec vous sur des cas réels.</p></li>
+          <li class="reveal"><span>04</span><h3>Mise en service & suivi</h3><p>Déploiement, formation de vos équipes et améliorations continues.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="ed-sec">
+      <div class="container ed-faq">
         <div>
-          <p class="crumbs fade-up"><a href="index.html">Accueil</a> / Agents IA & automatisation</p>
-          <h1 class="fade-up d1" style="margin-top:18px">Des agents IA qui <span class="grad">travaillent pour vous</span></h1>
-          <p class="lead fade-up d2">Chatbots, agents métiers, automatisation des processus : nous concevons des solutions d'intelligence artificielle connectées à vos outils pour faire gagner du temps à vos équipes.</p>
-          <div class="hero-cta fade-up d3">
-            <a href="index.html#contact" class="btn btn-primary magnetic">Demander un devis <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-            <a href="tel:+33785138224" class="btn btn-ghost magnetic">Nous appeler</a>
-          </div>
+          <p class="ed-kicker reveal">(05) — Questions</p>
+          <h2 class="ed-h2 reveal">Ce que l'on nous <em>demande</em> souvent.</h2>
         </div>
-        <div class="ph fade-up d2"><img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1200&q=80" alt="Intelligence artificielle pour entreprises" /></div>
+        <div class="ed-qs">
+          <details class="ed-q reveal"><summary><span>Combien coûte un agent IA ?</span><i aria-hidden="true"></i></summary><p>Le coût dépend du périmètre (nombre de tâches, outils à connecter, volume d'échanges). Après un premier échange, nous vous remettons un devis détaillé et adapté.</p></details>
+          <details class="ed-q reveal"><summary><span>L'agent IA peut-il se connecter à mes outils actuels ?</span><i aria-hidden="true"></i></summary><p>Oui. Nos agents peuvent être connectés à votre site, votre messagerie, votre CRM, votre agenda ou vos logiciels métiers selon leurs possibilités d'intégration.</p></details>
+          <details class="ed-q reveal"><summary><span>Faut-il des compétences techniques pour l'utiliser ?</span><i aria-hidden="true"></i></summary><p>Non. Nous livrons une solution prête à l'emploi, nous formons vos équipes et nous assurons le suivi.</p></details>
+          <details class="ed-q reveal"><summary><span>Que se passe-t-il si l'agent ne sait pas répondre ?</span><i aria-hidden="true"></i></summary><p>L'agent est configuré pour transmettre la demande à un membre de votre équipe lorsqu'une question sort de son périmètre.</p></details>
+          <details class="ed-q reveal"><summary><span>Mes données restent-elles confidentielles ?</span><i aria-hidden="true"></i></summary><p>Nous limitons l'accès de l'agent aux seules données nécessaires et choisissons des outils conformes au RGPD.</p></details>
+        </div>
       </div>
     </section>
 
-    <section class="block">
+    <section class="ed-end">
       <div class="container">
-        <div class="head center reveal">
-          <span class="eyebrow"><i></i> Nos services IA</span>
-          <h2>Les <span class="grad">10 services IA</span> que nous proposons</h2>
-          <p>Chaque service peut être réalisé seul ou combiné aux autres, selon vos priorités.</p>
-        </div>
-        <div class="ai-wrap">
-          <div class="ais reveal" id="ais">
-            <div class="ais-bg" aria-hidden="true"><i></i><i></i></div>
-            <ol class="ais-list">
-            <li class="ais-item active" data-ic="search">
-              <button type="button" class="ais-tab" aria-expanded="true"><span class="n">01</span><span class="t">Audit & stratégie IA</span><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span></button>
-              <div class="ais-detail"><div><p>Identifier les processus automatisables, évaluer les économies possibles et construire votre feuille de route IA.</p><div class="chips"><span>Cartographie des processus</span><span>Estimation des gains</span><span>Feuille de route</span></div></div></div>
-            </li>
-            <li class="ais-item" data-ic="flow">
-              <button type="button" class="ais-tab" aria-expanded="false"><span class="n">02</span><span class="t">Automatisation des processus</span><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="6" height="6" rx="1.5"/><rect x="15" y="15" width="6" height="6" rx="1.5"/><path d="M9 6h4a2 2 0 012 2v7"/></svg></span></button>
-              <div class="ais-detail"><div><p>Automatiser la saisie, les relances, les contrôles, la circulation des documents et les tâches administratives.</p><div class="chips"><span>Saisie automatique</span><span>Relances</span><span>Workflows</span></div></div></div>
-            </li>
-            <li class="ais-item" data-ic="bot">
-              <button type="button" class="ais-tab" aria-expanded="false"><span class="n">03</span><span class="t">Agents IA métiers</span><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="7" width="16" height="12" rx="3"/><path d="M12 3v4M9 12h.01M15 12h.01M9 16h6"/></svg></span></button>
-              <div class="ais-detail"><div><p>Des assistants capables d'exécuter des tâches dans vos CRM, ERP ou logiciels métiers, sous supervision.</p><div class="chips"><span>CRM & ERP</span><span>Logiciels métiers</span><span>Supervision humaine</span></div></div></div>
-            </li>
-            <li class="ais-item" data-ic="chat">
-              <button type="button" class="ais-tab" aria-expanded="false"><span class="n">04</span><span class="t">Chatbots intelligents</span><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></span></button>
-              <div class="ais-detail"><div><p>Répondre à vos clients, qualifier vos prospects et interroger vos documents internes, 24h/24.</p><div class="chips"><span>Site web</span><span>WhatsApp & e-mail</span><span>Base documentaire</span></div></div></div>
-            </li>
-            <li class="ais-item" data-ic="chart">
-              <button type="button" class="ais-tab" aria-expanded="false"><span class="n">05</span><span class="t">Data analytics & IA</span><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 6-6"/></svg></span></button>
-              <div class="ais-detail"><div><p>Détecter les anomalies, prévoir les ventes, analyser les marges et améliorer vos décisions.</p><div class="chips"><span>Prévisions</span><span>Anomalies</span><span>Tableaux de bord</span></div></div></div>
-            </li>
-            <li class="ais-item" data-ic="target">
-              <button type="button" class="ais-tab" aria-expanded="false"><span class="n">06</span><span class="t">IA commerciale & CRM</span><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></span></button>
-              <div class="ais-detail"><div><p>Qualifier les leads, préparer la prospection, enrichir le CRM et automatiser les suivis.</p><div class="chips"><span>Scoring des leads</span><span>Prospection</span><span>Suivi CRM</span></div></div></div>
-            </li>
-            <li class="ais-item" data-ic="doc">
-              <button type="button" class="ais-tab" aria-expanded="false"><span class="n">07</span><span class="t">IA documentaire</span><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg></span></button>
-              <div class="ais-detail"><div><p>Extraire automatiquement les données des factures, contrats, bons de commande et comptes rendus.</p><div class="chips"><span>Factures</span><span>Contrats</span><span>Comptes rendus</span></div></div></div>
-            </li>
-            <li class="ais-item" data-ic="shield">
-              <button type="button" class="ais-tab" aria-expanded="false"><span class="n">08</span><span class="t">IA finance & risques</span><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg></span></button>
-              <div class="ais-detail"><div><p>Automatiser les rapprochements, les contrôles, le reporting et l'analyse des écarts.</p><div class="chips"><span>Rapprochements</span><span>Contrôles</span><span>Reporting</span></div></div></div>
-            </li>
-            <li class="ais-item" data-ic="school">
-              <button type="button" class="ais-tab" aria-expanded="false"><span class="n">09</span><span class="t">Formation des équipes</span><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg></span></button>
-              <div class="ais-detail"><div><p>Former vos collaborateurs à l'IA générative et aux outils pour un usage efficace et sécurisé.</p><div class="chips"><span>Ateliers pratiques</span><span>Bonnes pratiques</span><span>Sécurité</span></div></div></div>
-            </li>
-            <li class="ais-item" data-ic="plug">
-              <button type="button" class="ais-tab" aria-expanded="false"><span class="n">10</span><span class="t">Intégration & maintenance</span><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2v6M15 2v6M6 8h12v4a6 6 0 01-12 0zM12 18v4"/></svg></span></button>
-              <div class="ais-detail"><div><p>Connecter l'IA à vos outils existants, la sécuriser et la faire évoluer dans la durée.</p><div class="chips"><span>Connexion à vos outils</span><span>Sécurité</span><span>Évolutions</span></div></div></div>
-            </li>
-            </ol>
-            <div class="ais-panel" aria-live="polite">
-              <div class="ais-num" aria-hidden="true">01</div>
-              <div class="ais-icon" aria-hidden="true"><span class="orb o1"></span><span class="orb o2"></span><div class="tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div></div>
-              <div class="ais-content">
-                <span class="ais-count">Service <b>01</b> / 10</span>
-                <h3>Audit & stratégie IA</h3>
-                <p>Identifier les processus automatisables, évaluer les économies possibles et construire votre feuille de route IA.</p>
-                <div class="chips"><span>Cartographie des processus</span><span>Estimation des gains</span><span>Feuille de route</span></div>
-              </div>
-              <div class="ais-foot">
-                <a href="index.html#contact" class="btn btn-white">Parler de ce service <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-                <div class="ais-arrows">
-                  <button type="button" class="ais-prev" aria-label="Service précédent"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M11 18l-6-6 6-6"/></svg></button>
-                  <button type="button" class="ais-next" aria-label="Service suivant"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
-                </div>
-              </div>
-              <div class="ais-progress"><i></i></div>
-            </div>
-          </div>
+        <p class="ed-kicker light reveal">Parlons de votre projet</p>
+        <h2 class="ed-end-h reveal">Quelle tâche voulez-vous <em>ne plus jamais faire</em> à la main&nbsp;?</h2>
+        <div class="ed-end-cta reveal">
+          <a href="index.html#contact" class="ed-btn light">Demander un devis <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a href="mailto:contact@alystra.tech" class="ed-link light">contact@alystra.tech</a>
         </div>
       </div>
     </section>
-
-    <section class="block alt">
-      <div class="container">
-        <div class="head center reveal">
-          <span class="eyebrow"><i></i> Cas d'usage</span>
-          <h2>Concrètement, <span class="grad">à quoi ça sert ?</span></h2>
-          <p>Quelques exemples de ce qu'un agent IA peut prendre en charge dans votre entreprise.</p>
-        </div>
-        <div class="usecases">
-          <div class="usecase reveal"><b>Accueil & support client</b><p>Un agent qui répond aux questions fréquentes sur votre site, WhatsApp ou e-mail, et transmet les cas complexes.</p></div>
-          <div class="usecase reveal"><b>Commercial</b><p>Qualification des prospects, prise de rendez-vous automatique et relances personnalisées.</p></div>
-          <div class="usecase reveal"><b>Administratif & finance</b><p>Lecture des factures, saisie automatique, rapprochements et reporting.</p></div>
-          <div class="usecase reveal"><b>Équipes internes</b><p>Un assistant qui connaît vos procédures et répond aux questions de vos collaborateurs.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="block">
-      <div class="container">
-        <div class="head center reveal">
-          <span class="eyebrow"><i></i> Avantages</span>
-          <h2>Pourquoi <span class="grad">automatiser avec l'IA</span></h2>
-          <p>Des bénéfices concrets, mesurables, pour vos équipes et vos clients.</p>
-        </div>
-        <div class="feat-grid">
-          <article class="box reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div><h3>Disponible 24h/24</h3><p>Vos clients obtiennent une réponse immédiate, même le soir et le week-end.</p></article>
-          <article class="box reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="6" height="6" rx="1.5"/><rect x="15" y="15" width="6" height="6" rx="1.5"/><path d="M9 6h4a2 2 0 012 2v7"/></svg></div><h3>Moins de tâches répétitives</h3><p>Vos équipes se concentrent sur les missions à forte valeur ajoutée.</p></article>
-          <article class="box reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Sous votre contrôle</h3><p>Des agents supervisés, connectés uniquement aux données nécessaires, dans le respect du RGPD.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="block alt">
-      <div class="container">
-        <div class="head center reveal">
-          <span class="eyebrow"><i></i> Notre méthode</span>
-          <h2>Comment <span class="grad">ça se passe</span></h2>
-        </div>
-        <div class="timeline" id="timeline">
-          <div class="track"><div class="fill" id="fill"></div></div>
-          <div class="step"><div class="dot">01</div><h3>Échange & diagnostic</h3><p>Nous analysons vos besoins, vos processus et vos objectifs, gratuitement et sans engagement.</p></div>
-          <div class="step"><div class="dot">02</div><h3>Proposition & devis</h3><p>Une solution claire, un planning et un devis détaillé, priorisés selon le retour sur investissement.</p></div>
-          <div class="step"><div class="dot">03</div><h3>Conception & développement</h3><p>Nous construisons la solution avec des démonstrations régulières pour valider chaque étape.</p></div>
-          <div class="step"><div class="dot">04</div><h3>Mise en ligne & suivi</h3><p>Déploiement, formation de vos équipes, maintenance et amélioration continue.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="block">
-      <div class="container">
-        <div class="head center reveal">
-          <span class="eyebrow"><i></i> FAQ</span>
-          <h2>Questions <span class="grad">fréquentes</span></h2>
-        </div>
-        <div class="faq">
-          <details class="reveal"><summary>Combien coûte un agent IA ?</summary><p>Le coût dépend du périmètre (nombre de tâches, outils à connecter, volume d'échanges). Après un premier échange, nous vous remettons un devis détaillé et adapté.</p></details>
-          <details class="reveal"><summary>L'agent IA peut-il se connecter à mes outils actuels ?</summary><p>Oui. Nos agents peuvent être connectés à votre site, votre messagerie, votre CRM, votre agenda ou vos logiciels métiers selon leurs possibilités d'intégration.</p></details>
-          <details class="reveal"><summary>Faut-il des compétences techniques pour l'utiliser ?</summary><p>Non. Nous livrons une solution prête à l'emploi, nous formons vos équipes et nous assurons le suivi.</p></details>
-          <details class="reveal"><summary>Que se passe-t-il si l'agent ne sait pas répondre ?</summary><p>L'agent est configuré pour transmettre la demande à un membre de votre équipe lorsqu'une question sort de son périmètre.</p></details>
-        </div>
-      </div>
-    </section>
-
-    <section class="cta">
-      <div class="container">
-        <div class="cta-box reveal">
-          <div class="rings" aria-hidden="true"><i></i><i></i><i></i></div>
-          <div class="inner">
-            <h2>Quelle tâche voulez-vous <br/>automatiser en premier ?</h2>
-            <p>Décrivez-nous votre besoin : nous identifions avec vous l'automatisation la plus rentable.</p>
-            <div class="btns">
-              <a href="index.html#contact" class="btn btn-white magnetic">Demander un devis <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-              <a href="tel:+33785138224" class="btn btn-outline-white magnetic">Appeler le +33 7 85 13 82 24</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
   </main>
 
   <footer>
@@ -297,6 +353,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=4"></script>
+  <script src="script.js?v=5"></script>
 </body>
 </html>

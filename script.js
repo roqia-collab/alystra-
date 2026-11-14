@@ -301,6 +301,32 @@ if (ais) {
   visCheck();
 }
 
+/* ---------- Page éditoriale : aperçu photo au survol des services ---------- */
+const preview = $('.idx-preview');
+if (preview && fine && !reduce) {
+  const pimg = $('img', preview);
+  let px = 0, py = 0, tx = 0, ty = 0, raf = null;
+  const loop = () => { px += (tx - px) * .18; py += (ty - py) * .18; preview.style.left = px + 'px'; preview.style.top = py + 'px'; raf = requestAnimationFrame(loop); };
+  $$('.idx-row').forEach(row => {
+    row.addEventListener('mouseenter', e => {
+      if (pimg.getAttribute('src') !== row.dataset.img) pimg.src = row.dataset.img;
+      tx = px = e.clientX + 170; ty = py = e.clientY;
+      preview.classList.add('on'); if (!raf) loop();
+    });
+    row.addEventListener('mousemove', e => { tx = e.clientX + 170; ty = e.clientY; });
+    row.addEventListener('mouseleave', () => { preview.classList.remove('on'); cancelAnimationFrame(raf); raf = null; });
+  });
+}
+
+/* ---------- Page éditoriale : onglets des cas d'usage ---------- */
+$$('.uc').forEach(uc => {
+  const tabs = $$('.uc-tab', uc), panes = $$('.uc-pane', uc);
+  tabs.forEach(t => t.addEventListener('click', () => {
+    tabs.forEach(x => x.classList.toggle('on', x === t));
+    panes.forEach(p => p.classList.toggle('on', p.dataset.k === t.dataset.k));
+  }));
+});
+
 /* ---------- Formulaire de devis ---------- */
 const form = $('#contactForm');
 if (form) {
