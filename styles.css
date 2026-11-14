@@ -390,8 +390,17 @@ section.alt { background: var(--soft); }
 
 /* ---------- CTA ---------- */
 .cta { padding: 0 0 130px; }
-.cta-box { position: relative; border-radius: 6px; overflow: hidden; padding: 96px 64px; text-align: left; background: #121318; color: #f6f4ef; }
-.cta-box .inner { margin: 0 !important; max-width: 900px !important; }
+.cta-box { position: relative; border-radius: 6px; overflow: hidden; padding: 0; text-align: left; background: #121318; color: #f6f4ef; display: grid; grid-template-columns: 1.15fr .85fr; min-height: 460px; }
+.cta-box .inner { margin: 0 !important; max-width: none !important; padding: 80px 56px; align-self: center; }
+.cta-photo { position: relative; overflow: hidden; min-height: 100%; }
+.cta-photo img { position: absolute; inset: -8% 0; width: 100%; height: 116%; object-fit: cover; filter: grayscale(.2); }
+.cta-photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, #121318 0%, rgba(18,19,24,0) 35%); }
+@media (max-width: 900px) {
+  .cta-box { grid-template-columns: 1fr; min-height: 0; }
+  .cta-photo { order: -1; height: 240px; min-height: 0; }
+  .cta-photo::after { background: linear-gradient(0deg, #121318 0%, rgba(18,19,24,0) 45%); }
+  .cta-box .inner { padding: 36px 26px 44px; }
+}
 .cta-box h2 { font-family: "Instrument Serif", Georgia, serif; font-weight: 400; font-size: clamp(2.4rem, 5.4vw, 4.8rem); line-height: 1.02; letter-spacing: -.015em; color: #f6f4ef !important; }
 .cta-box h2 em { font-style: italic; color: #a5a8ff; }
 .cta-box p { color: rgba(246,244,239,.7) !important; max-width: 560px; }
@@ -535,7 +544,7 @@ footer .wordmark { color: #fff; }
   .device .phone { width: 140px; height: 280px; border-radius: 26px; padding: 7px; }
   .device .phone img { border-radius: 20px; }
   form.contact { padding: 22px; }
-  .cta-box { padding: 64px 22px; border-radius: 26px; }
+  .cta-box { border-radius: 6px; }
   .page-hero { padding: 130px 0 70px; }
   .cursor-glow { display: none; }
   .faq details { padding: 0 18px; }
